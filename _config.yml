@@ -1,0 +1,26 @@
+# Setup
+name: 
+  K.Weather .
+tagline: 
+  blog
+baseurl: 
+  "https://kdkrkwhr.github.io"
+locale: 
+  "ko"
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: 
+  kramdown
+
+disqus_shortname: 'https-kdkrkwhr-github-io'
+
+disqus-identifier: 
+  https-kdkrkwhr-github-io
+
+comments:
+  disqus:
+    shortname: https-kdkrkwhr-github-io

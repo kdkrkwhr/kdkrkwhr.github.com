@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+<div style="display: inline-block; width: 100%;">
+    <p class="meta" style="float: left;">{{ page.date | date_to_string }}</p>
+    <p class="meta" style="color: rgb(146, 195, 235); float: right;">Author - <strong>{{ page.author }}</strong></p>
+</div>
+{{ content }}
+
+{% if page.comments %} 
+    <div id="post-disqus" class="container"> 
+        {% include disqus.html %} </div>
+    </div>
+{% endif %}
