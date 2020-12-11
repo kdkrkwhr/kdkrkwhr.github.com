@@ -113,13 +113,15 @@ server {
 
 * Port 변경 이용 include 파일 추가
  * vi /etc/nginx/conf.d/service-url.inc
+
 ```conf
 [service-url.inc]
 
 set $service_url http://localhost:8081
 ```
 
-### 확인 용 RESTFull API 개발
+### 활성화 된 Profile 조회 RESTFull API 개발
+
 ```java
 
 /**
@@ -140,16 +142,15 @@ public class ProfileRestController {
 
 ```
 
-
 ### jar 파일 실행
 
 * build 생성 된 jar파일을 실행 해봅시다
 
 ```bash
-// 1번 서비스 실행
+// prod1 profile 서비스 실행
 java -jar -Dspring.profiles.active=prod1 ./kdk-dev.jar
 
-// 2번 서비스 실행
+// prod2 profile 서비스 실행
 java -jar -Dspring.profiles.active=prod2 ./kdk-dev.jar
 ```
 * 주의 :: 무중단 배포는, 항시 서비스 두개 중 하나는 실행 상태를 유지 하여야 합니다.
