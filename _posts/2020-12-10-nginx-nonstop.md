@@ -163,7 +163,7 @@ java -jar -Dspring.profiles.active=prod2 ./kdk-dev.jar
 
 1. .jar 파일 교체 (Nginx가 메인 주제이기에 jar파일 배포 과정등은 생략 하겠습니다.)
 2. conf 파일 수정
-```conf
+```bash
 [/etc/nginx/conf.d/service-url.inc]
 set $service_url http://localhost:8080
 ```
