@@ -144,7 +144,7 @@ public class ProfileRestController {
 
 ### jar 파일 실행
 
-* build 생성 된 jar파일을 실행 해봅시다
+* build 생성 된 jar파일을 실행 . (build 과정 생략)
 
 ```bash
 // prod1 profile 서비스 실행
@@ -162,7 +162,7 @@ java -jar -Dspring.profiles.active=prod2 ./kdk-dev.jar
 
 ![2020-12-10-nginx-non-stop-3](/assets/2020-12-10-nginx-non-stop-3.jpg)
 
-1. .jar 파일 교체 (Nginx가 메인 주제이기에 jar파일 배포 과정등은 생략 하겠습니다.)
+1. 수전된 버전으로 jar 파일 교체
 2. conf 파일 수정
 ```bash
 [/etc/nginx/conf.d/service-url.inc]

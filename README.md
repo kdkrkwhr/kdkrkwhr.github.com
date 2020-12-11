@@ -69,3 +69,7 @@ GitHub-flavored Markdown is supported by kramdown by default, so you can use Mar
 
 * jekyll, 혹은 html/css 등으로 할 수 있는 일이 아주 많습니다. 포스팅이 아니어도 디자인 수정, 오타 수정, 설명 갱신 등 누구라도 PR 을 만들어서 보내주시면 감사히 받겠습니다.
 * 이를테면, 태그 클라우드를 만들어 붙인다던가요.
+
+## References
+
+* [hyperconnect](https://github.com/hyperconnect/hyperconnect.github.io)
