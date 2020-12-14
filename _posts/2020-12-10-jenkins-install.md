@@ -68,12 +68,13 @@ comments: true
 ----
 ### 프로젝트 자동 배포 환경 설정
 
-* 이용 플러그인 추가 설치 
+#### 이용 플러그인 추가 설치 
 
-Gradle 플러그인
-Jenkins 관리  플러그인 관리  Gradle Plugin
-Shell 실행 플러그인
-Jenkins 관리  플러그인 관리  Post build task Plugin
+* Gradle 플러그인
+	Jenkins 관리 => 플러그인 관리 => Gradle Plugin
+
+* Shell 실행 플러그인
+	Jenkins 관리 => 플러그인 관리 => Post build task Plugin
 
 #### New Item 생성
 
