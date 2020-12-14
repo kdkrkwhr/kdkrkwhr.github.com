@@ -49,17 +49,20 @@ comments: true
 
 ----
 ### 테스트 프로젝트 준비
+
 * 프로젝트 생성 (spring boot 환경)
+
 ![2020-12-14-jenkins-install-2](/assets/2020-12-14-jenkins-install-2.jpg)
 
 * 프로젝트 Build
+
 ![2020-12-14-jenkins-install-3](/assets/2020-12-14-jenkins-install-3.jpg)
 
 ----
-### GitHub 설정
+### GitHub 설정 (준비중)
 
 ----
-### 프로젝트 자동 배포 환경 설정
+### 프로젝트 자동 배포 환경 설정 (준비중)
 
 ----
 ### 맺으며
