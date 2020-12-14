@@ -47,12 +47,15 @@ comments: true
 
 7. 관리자 계정 생성  
 
+----
+
+
 위 같은 Jenkins 설치 및 기본 환경설정 작업이 필요하나, 포스팅에 추가를 하진 않겠습니다.
 
 대신, Jenkins 설치와 관련하여 정리가 잘 되어 있는 참조 포스팅을 소개드리겠습니다.
 
 
-[갓대희-Jenkins 설치](https://goddaehee.tistory.com/82)
+[( 갓대희-Jenkins 설치 )](https://goddaehee.tistory.com/82)
 
 ----
 ### 테스트 프로젝트 준비
@@ -75,6 +78,7 @@ comments: true
 
 * Shell 실행 플러그인
 	Jenkins 관리 => 플러그인 관리 => Post build task Plugin
+
 
 #### New Item 생성
 
