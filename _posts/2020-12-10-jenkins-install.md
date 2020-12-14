@@ -1,4 +1,3 @@
-
 ---
 layout: post
 author: Kim, DongKi
@@ -31,8 +30,6 @@ comments: true
 * Build :: Gradle v6.7
 * SVC :: GitHub
 
-![2020-12-10-nginx-non-stop-1](/assets/2020-12-10-nginx-non-stop-1.jpg)
-
 ----
 ### Jekins 설치
 
@@ -44,7 +41,7 @@ comments: true
 6. (Install suggested plugins) 선택 하여 Plugin 설치
 7. 관리자 계정 생성  
 
- 위 같은 Jenkins 설치 및 기본 환경설정 작업이 필요하나, 포스팅에 추가를 하진 않겠습니다
+위 같은 Jenkins 설치 및 기본 환경설정 작업이 필요하나, 포스팅에 추가를 하진 않겠습니다
 단, Jenkins 설치와 관련하여 정리가 잘 되어 있는 참조 포스팅을 소개드리겠습니다.
 
 
@@ -52,10 +49,10 @@ comments: true
 
 ----
 ### 테스트 프로젝트 준비
-* 프로젝트 생성  
+* 프로젝트 생성 (spring boot 환경)
 ![2020-12-14-jenkins-install-2](/assets/2020-12-14-jenkins-install-2.jpg)
 
-* jar File 생성  
+* 프로젝트 Build
 ![2020-12-14-jenkins-install-3](/assets/2020-12-14-jenkins-install-3.jpg)
 
 ----
@@ -70,7 +67,6 @@ comments: true
 이번에 진행한 "프로젝트에 Jenkins 적용하기" 를 포스팅하며 다시 한번 Jenkins를 짚고 넘어갈 수 있었으며, 앞으로 적극 활용하게 될 거 같군요. 감사합니다.
 
 -끝-
-
 
 ----
 ### References
