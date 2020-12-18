@@ -428,6 +428,7 @@ th {
 
 /* LAYOUT STYLES */
 body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
@@ -817,9 +818,7 @@ dl dd {
     margin-top: 15px;
     font-size: 13px;
     line-height: 1;
-    color: #2879d0;
     text-align: center;
-    background-color: #9ddcff;
     background-image: none;
     border-radius: 5px;
     -moz-border-radius: 5px;
