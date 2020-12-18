@@ -77,7 +77,7 @@ $ cd opentsdb-docker
 $ docker-compose up -d
 ```
 
-* http://localhost:4242 로 접속이 된다면 성공
+* [http://localhost:4242](http://localhost:4242) 로 접속이 된다면 성공
 ![2020-12-17-docker-opents-5](/assets/2020-12-17-docker-opents-5.jpg)
 
 * 저 같은 경우 OpenTSDB 기본포트은 4242 Port를 이용하지않고 7777 port로 변경을 하였습니다
