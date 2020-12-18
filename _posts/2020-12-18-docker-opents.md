@@ -99,7 +99,7 @@ opentsdb:
 ----
 ####  OpenTSDB 제공 API Example
 
-  **1. 데이터 추가**
+**1. 데이터 추가**
 - Url 
   + http://localhost:7777/api/put?details
 - Method
@@ -126,7 +126,9 @@ opentsdb:
 	}
 	```
 
-  **2. 데이터 조회**
+---
+
+**2. 데이터 조회**
 - Url 
   + http://localhost:7777/api/query?start=1D-ago&m=sum:kdk.test
 - Method
