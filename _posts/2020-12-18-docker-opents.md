@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Kim, DongKi
-title:  "OpenTSDB 이용하기 (With. Docker)"
+title:  "OpenTSDB 이용하기 (with, Docker)"
 date:   2020-12-18
 categories: devOps
 comments: true
@@ -100,7 +100,7 @@ opentsdb:
 ----
 ####  OpenTSDB 제공 API Example
 
-**1. 데이터 추가**
+**1. 데이터 추가 API**
 - Url 
   + http://localhost:7777/api/put?details
 - Method
@@ -129,7 +129,7 @@ opentsdb:
 
 ---
 
-**2. 데이터 조회**
+**2. 데이터 조회 API**
 - Url 
   + http://localhost:7777/api/query?start=1D-ago&m=sum:kdk.test
 - Method
@@ -162,7 +162,7 @@ opentsdb:
 ---
 ### 맺으며
 
-* 오늘은 Docker 컨테이너 위 OpenTSDB를 설치하는 것까지 완료가 되었네요, 다음 포스팅은 OpenTSDB 제공 서비스 API 를 이용하여 Spring-boot에서 이용을 해보도록 하겠습니다.
+* 오늘은 Docker 컨테이너 위 OpenTSDB를 설치하는 것 까지가 완료가 되었네요, 다음 포스팅은 OpenTSDB 에서 제공한 서비스 API 를 이용하여 Spring Boot에서 이용을 해볼까 합니다.
 
 
 **감사합니다.**
