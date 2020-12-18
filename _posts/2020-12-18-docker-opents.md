@@ -47,7 +47,7 @@ Docker를 사용한 이유는 OpenTSDB를 세팅/설치 하는데 많은 설정(
 
 * 제어판 > 프로그램 설치 및 제거 > Window 기능 켜기/끄기 클릭 > Hyper-V 체크 확인 후 리부팅
 
-* [Docker]](https://hub.docker.com/editions/community/docker-ce-desktop-windows/) 설치
+* [Docker](https://hub.docker.com/editions/community/docker-ce-desktop-windows/) 설치
 
 * Docker 설치 완료 => Docker 계정이 없다면 회원가입 => 로그인
 ![2020-12-17-docker-opents-3](/assets/2020-12-17-docker-opents-3.jpg)
@@ -62,7 +62,7 @@ Docker version 20.10.0, build 7287ab3
 ----
 ### OpenTSDB 설치
  
-* [Docker Hub]](https://hub.docker.com/r/petergrace/opentsdb-docker) 접속
+* [Docker Hub](https://hub.docker.com/r/petergrace/opentsdb-docker) 접속
 
 * OpenTSDB를 Docker Hub에서 검색하면 다수의 Hub들이 존재하나, 저는 petergrace/opentsdb-docker로 받도록 하겠습니다.
 ![2020-12-17-docker-opents-4](/assets/2020-12-17-docker-opents-4.jpg)
@@ -158,6 +158,11 @@ opentsdb:
       }
   ]
 	```
+
+
+* 그 외 관련 API에 대한 정보 입니다.
+ [https://runebook.dev/ko/docs/opentsdb/api_http/query/index](https://runebook.dev/ko/docs/opentsdb/api_http/query/index)
+
 
 ---
 ### 맺으며
