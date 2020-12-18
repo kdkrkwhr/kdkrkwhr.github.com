@@ -131,12 +131,12 @@ opentsdb:
   + start (Ex, 1D-ago)
   + m (Ex, sum:kdk.test)
 
+---
+### 맺으며
 
-### 테스트 프로젝트 준비 (준비중)
+* 오늘은 Docker 컨테이너 위 OpenTSDB를 설치하는 것까지 완료가 되었네요, 다음 포스팅은 OpenTSDB 제공 서비스 API 를 이용하여 Spring-boot에서 이용을 해보도록 하겠습니다.
 
-#### 수집용 Schedeuler 개발
 
-#### 조회용 API 개발
-
+**감사합니다.**
 
 
