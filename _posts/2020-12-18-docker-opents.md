@@ -136,6 +136,27 @@ opentsdb:
 - Parameter
   + start (Ex, 1D-ago)
   + m (Ex, sum:kdk.test)
+- Response
+  + Type :: JSON
+	```
+  [
+      {
+          "metric": "kdk.test",
+          "tags": {},
+          "aggregateTags": [
+              "host"
+          ],
+          "dps": {
+              "1608179620": 20,
+              "1608179630": 20,
+              "1608179640": 29,
+              "1608179650": 11,
+              "1608179660": 18,
+              "1608255494": 10
+          }
+      }
+  ]
+	```
 
 ---
 ### 맺으며
