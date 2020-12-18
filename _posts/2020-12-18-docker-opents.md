@@ -10,14 +10,18 @@ comments: true
 ### TL;DR
 
 #### OpenTSDB 란?
-* 시간과 값을 하나의 세트로 묶어 데이터를 저장하고 서비스하는데 최적화 된 시계열 DB중 하나입니다.
+* 시간과 값을 하나의 세트로 데이터를 저장하고 서비스하는데 최적화 된 시계열 DB중 하나입니다.
 * OpenTSDB는 주로 IoT 서비스를 구현하는데 이용이 되고, Hbase 위에서 구동이 됩니다.
+
+![2020-12-17-docker-opents-1](/assets/2020-12-17-docker-opents-1.jpg)
 
 #### Docker 란?
 * Docker 란 간단히 컨테이너 기반의 오픈소스 가상화 플랫폼 입니다.
 * 다양한 프로그램, 실행환경을 컨테이너로 추상화하고 동일한 인터페이스를 제공하여 프로그램의 배포 및 관리를 단순하게 해줍니다.
 
-![2020-12-17-docker-opents-1](/assets/2020-12-17-docker-opents-1.jpg)
+![2020-12-17-docker-opents-6](/assets/2020-12-17-docker-opents-6.jpg)
+
+
 
 안녕하세요, 김동기 입니다.
 오늘은 NoSQL DB중 하나인 OpenTSDB를 포스팅 주제로 선정 하였습니다.
@@ -29,8 +33,8 @@ Docker를 사용한 이유는 OpenTSDB를 세팅/설치 하는데 많은 설정(
 
 ( 제가 고래를 좋아하여 블로그 캐릭터도 고래를 디자인하여 사용하는데 Docker 메인 캐릭터도 고래라니 정말 정감이 가네요,,, )
 
-![2020-12-17-docker-opents-2](/assets/2020-12-17-docker-opents-2.jpg)
 
+![2020-12-17-docker-opents-2](/assets/2020-12-17-docker-opents-2.jpg)
 ----
 ### 서버 환경
 
