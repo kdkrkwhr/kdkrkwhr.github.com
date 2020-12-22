@@ -92,7 +92,7 @@ petergrace/opentsdb-docker   latest    e27e35699c3f   2 weeks ago   683MB
 * [http://localhost:4242](http://localhost:4242) 로 접속이 된다면 성공
 ![2020-12-18-docker-opents-5](/assets/2020-12-18-docker-opents-5.jpg)
 
-* 저 같은 경우 OpenTSDB 기본포트은 4242 Port를 이용하지않고 7777 port로 변경을 하였습니다
+저 같은 경우 OpenTSDB 기본포트인 4242 Port를 이용하지않고 7777 port로 변경을 하였습니다
 
 ```
 [docker-compose.yml]
