@@ -226,4 +226,4 @@ public class MainScheduler {
 - 다음 포스팅은 위 실시간 주차장 데이터를 이용한 서비스를 한번 구현해 보도록 하겠습니다. (아이디어 부족,,,)
 
 
-전체 소스는 [GitHub]](https://github.com/kdkrkwhr/airport-parking) 에서 확인 가능 합니다.
+전체 소스는 [GitHub](https://github.com/kdkrkwhr/airport-parking) 에서 확인 가능 합니다.
