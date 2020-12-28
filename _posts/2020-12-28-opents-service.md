@@ -90,6 +90,7 @@ public class MainScheduler {
 - OpenAPI를 호출하여 TSDB 내 1분 주기 실시간 데이터 수집을 진행하기 위한 스케쥴러 입니다.
 - service class의 minuteScheduleF()를 분 단위로 호출을 하고 있습니다.
 
+---
 ```java
   public int minuteScheduleF(long timestamp) {
     int result = 0;
@@ -124,6 +125,7 @@ public class MainScheduler {
 
 - 1분을 주기로 scheduler에서 호출하는 함수 입니다. (main 역할)
 
+---
 ```java
   public JSONArray getAirportJsonArrayDatas() throws Exception {
     JSONParser jsonParser = new JSONParser();
@@ -139,6 +141,7 @@ public class MainScheduler {
 
 - 앞서 만들었던 JSON 파일에서 정적 데이터를 호출하도록 작성된 함수 입니다.
 
+---
 ```java
   @Value("${open-api.key}")
   private String apiKey;
@@ -176,6 +179,7 @@ public class MainScheduler {
 
 - Open API를 호출하여 data가져올 함수 입니다.
 
+---
 ```java
 
   private static String getTagValue(String tag, Element eElement) {
@@ -190,7 +194,7 @@ public class MainScheduler {
 
 - Open API로 조회한 XML Tag를 분류하기 위한 함수 입니다.
 
-
+---
 ```java
   public int openTSDataInsert(String metric, long timestamp, int value, JSONObject tags) throws Exception {
     RestTemplate restTemplate = new RestTemplate();
