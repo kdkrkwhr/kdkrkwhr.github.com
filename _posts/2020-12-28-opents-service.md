@@ -217,7 +217,7 @@ public class MainScheduler {
 ```
 
 - TSDB에 가공된 데이터를 최종적으로 입력해주는 함수 입니다.
- 
+
 ### 결과 확인
 
 ![2020-12-28-opents-service-2](/assets/2020-12-28-opents-service-2.jpg)
