@@ -26,13 +26,9 @@ comments: true
 이번 포스팅은 Elasticsearch stack을 프로젝트에서 직접 적용을 하는 방법을 주제로 해봤습니다. 
 ELK S/W 설치는 아래 공식 사이트 설치 페이지에서 받으실 수 있습니다
 
-- Elasticsearch
-  - https://www.elastic.co/kr/downloads/elasticsearch
-- Logstash
-  - https://www.elastic.co/kr/downloads/logstash
-- Kibana
-  - https://www.elastic.co/kr/downloads/kibana
-
+- [Elasticsearch](https://www.elastic.co/kr/downloads/elasticsearch)
+- [Logstash](https://www.elastic.co/kr/downloads/logstash)
+- [Kibana](https://www.elastic.co/kr/downloads/kibana)
 
 ----
 #### Environment
