@@ -23,7 +23,7 @@ comments: true
 ----
 ### 들어가며
 
-이번 포스팅은 Elasticsearch stack을 프로젝트에서 직접 적용을 하는 방법을 주제로 해봤습니다. 
+이번 포스팅은 Elasticsearch stack을 Spring Boot 프로젝트에서 직접 적용을 하는 방법을 주제로 해봤습니다. 
 ELK S/W 설치는 아래 공식 사이트 설치 페이지에서 받으실 수 있습니다
 
 - [Elasticsearch](https://www.elastic.co/kr/downloads/elasticsearch)
@@ -197,7 +197,6 @@ public class Position {
 
 ```
 
-
 ----
 #### Elasticsearch Repository 생성
 
@@ -207,6 +206,49 @@ public class Position {
 
 @Repository
 public interface PositionEsRepository extends ElasticsearchRepository<Position, String> {}
+
+```
+
+----
+#### Request, Response Oject 생성
+
+[PositionRequestDto.java]
+
+```java
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@ToString
+public class PositionRequestDto {
+
+  @NotBlank(message = "사용자 아이디를 알려주세요.")
+  private String userId;
+
+  @NotBlank(message = "경도 값 을 입력하세요.")
+  private Double lon;
+
+  @NotBlank(message = "위도 값 을 입력하세요.")
+  private Double lat;
+}
+
+```
+
+[PositionResponseDto.java]
+
+```java
+
+@Getter
+@Builder
+@Document(indexName = "position")
+public class PositionResponseDto {
+
+  private String userId;
+  private Double lon;
+  private Double lat;
+}
 
 ```
 
