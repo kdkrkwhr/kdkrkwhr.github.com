@@ -3,7 +3,7 @@ layout: post
 author: Kim, DongKi
 title:  "(GitHub) Copilot AI 적용 하기"
 date:   2021-07-13
-categories: Technology
+categories: devOps
 comments: true
 ---
 
