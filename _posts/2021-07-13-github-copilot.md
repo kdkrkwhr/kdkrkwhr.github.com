@@ -3,7 +3,7 @@ layout: post
 author: Kim, DongKi
 title:  "(GitHub) Copilot AI 적용 하기"
 date:   2021-07-13
-categories: devOps
+categories: Technology
 comments: true
 ---
 
@@ -78,18 +78,18 @@ AI가 설계 시 기반 데이터는 전세계 개발자들이 GitHub에 기여�
 ----
 #### 실제 적용 
 
-* 이제 실제 적용하는 모습을 보여드리겠습니다.  
-
+* 함수명에 따른 제안
 ![2021-07-13-github-copilot-7](/assets/2021-07-13-github-copilot-7.jpg)
 위 내용과 같이 "function calculateDaysBetweenDates(begin, end) {"로 함수명만 작성 하였더니 명명에 맞는 코드를 제안하는 모습 입니다. 
-
 ![2021-07-13-github-copilot-8](/assets/2021-07-13-github-copilot-8.jpg)
 위 상태에서 Tab을 누르니 AI에서 제안한 내용으로 코드가 생성된 것을 확인할 수 있습니다. wow 😲😲
-
 이번엔 다른 다시 처음 상태에서 Ctrl + Enter를 입력 해 보겠습니다.
-
 ![2021-07-13-github-copilot-9](/assets/2021-07-13-github-copilot-9.jpg)
 Ctrl + Enter를 누르니 위 이미지와 같이 이번엔 각자 다른 10개의 제안을 받았습니다. 😮😮
+
+* 주석과 함수명에 따른 제안 (특정 Lib를 이용하고 싶은 경우)
+![2021-07-13-github-copilot-10](/assets/2021-07-13-github-copilot-10.jpg)
+위 같이 주석을 같이 인식을 하여 코드를 제안한 모습입니다. 👏
 
 ----
 ### 마무리
