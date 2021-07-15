@@ -88,6 +88,7 @@ AI가 설계 시 기반 데이터는 전세계 개발자들이 GitHub에 기여�
 Ctrl + Enter를 누르니 위 이미지와 같이 이번엔 각자 다른 10개의 제안을 받았습니다. 😮😮
 
 * 주석과 함수명에 따른 제안 (특정 Lib를 이용하고 싶은 경우)
+![2021-07-13-github-copilot-11](/assets/2021-07-13-github-copilot-11.jpg)
 ![2021-07-13-github-copilot-10](/assets/2021-07-13-github-copilot-10.jpg)
 위 같이 주석을 같이 인식을 하여 코드를 제안한 모습입니다. 👏
 
