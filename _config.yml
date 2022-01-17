@@ -27,7 +27,7 @@ comments:
 
 # Analytics
 analytics:
-  provider: "google-gtag" 
+  provider: google-gtag
   google:
-    tracking_id: "G-PEYQZC0NSH"
+    tracking_id: G-PEYQZC0NSH
     anonymize_ip: false
