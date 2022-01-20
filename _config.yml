@@ -31,3 +31,5 @@ analytics:
   google:
     tracking_id: G-PEYQZC0NSH
     anonymize_ip: false
+
+theme: jekyll-theme-tactile
