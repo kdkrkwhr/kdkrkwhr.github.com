@@ -22,16 +22,16 @@ comments: true
 
 #### FCM 서비스 세팅
 
-- [Google Firebase Platform](https://firebase.google.com)
+**[Google Firebase Platform](https://firebase.google.com)**
 
-- 1) 위 Firebase 접속 및 로그인 (Google 계정)
+1) 위 Firebase 접속 및 로그인 (Google 계정)
 
-- 2) Firebase 프로젝트 생성
+2) Firebase 프로젝트 생성
 
-- 3) 프로젝트 설정, 클라우드 메시징 메뉴 내 **"서버 키"** 저장 보관 
+3) 프로젝트 설정, 클라우드 메시징 메뉴 내 **"서버 키"** 저장 보관 
    + (서버 사이드에서 FCM API 인증 시 이용)
 
-- 4) 프로젝트 설정, 서비스 계정 메뉴 내 **"새 비공개 키 생성"** 저장 보관 
+4) 프로젝트 설정, 서비스 계정 메뉴 내 **"새 비공개 키 생성"** 저장 보관 
    + (클라이언트 영역에서 이용)
 
 
