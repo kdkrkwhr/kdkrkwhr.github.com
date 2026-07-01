@@ -31,6 +31,42 @@
       "published_at": "2026-07-01"
     },
     {
+      "id": "infra-survival-layer-storage",
+      "title": "온프레미스 인프라 학습 ① — 계층 구조와 스토리지",
+      "category": "devOps",
+      "outline": "온프레미스 계층 구조, AG/LDEV/LUN, NAS/SAN, 1주차 로드맵 (인프라 생존기 기반)",
+      "status": "published",
+      "published_at": "2026-07-01"
+    },
+    {
+      "id": "infra-survival-virt-os-net",
+      "title": "온프레미스 인프라 학습 ② — 가상화·OS·네트워크",
+      "category": "devOps",
+      "outline": "VMware/LPAR, vCPU/Datastore, OS 성능 도구, L2/L3·Latency, 2주차 로드맵",
+      "status": "pending"
+    },
+    {
+      "id": "infra-survival-db-backup-ops",
+      "title": "온프레미스 인프라 학습 ③ — DB·백업·운영과 흔한 착각",
+      "category": "devOps",
+      "outline": "RAC/ASM, NetBackup, MOP/CMDB, 착각 패턴, 시리즈 마무리",
+      "status": "pending"
+    },
+    {
+      "id": "ssot-why-and-structure",
+      "title": "Git SSoT ① — 왜 하나의 맥락을 쌓는가",
+      "category": "AI",
+      "outline": "SSoT 개념, adr/rfc/spec/prd/policy, scope·폴더, E2E ⑦·티켓 링크, ouroboros 글 심화",
+      "status": "pending"
+    },
+    {
+      "id": "ssot-ops-and-validation",
+      "title": "Git SSoT ② — 운영·검증·LLM 컨텍스트 다이어트",
+      "category": "AI",
+      "outline": "validate-ssot, front matter, INDEX 요약, convert-to-ssot, supersedes, FAQ",
+      "status": "pending"
+    },
+    {
       "id": "ai-coding-agents",
       "title": "AI 코딩 에이전트 비교 — Cursor, Claude Code, Copilot",
       "category": "AI",
