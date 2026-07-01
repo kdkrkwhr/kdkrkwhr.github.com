@@ -19,7 +19,8 @@
       "title": "Hermes Agent로 로컬 AI 자동화하기",
       "category": "AI",
       "outline": "Hermes란, 설치·프로필, cron·스킬, Discord 연동 개요",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-07-01"
     },
     {
       "id": "ai-coding-agents",
