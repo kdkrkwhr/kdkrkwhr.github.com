@@ -1,0 +1,41 @@
+<aside class="sidebar" id="sidebar">
+  <section class="sidebar-section">
+    <h2 class="sidebar-title">Connect</h2>
+    <ul class="sidebar-links">
+      <li><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.loudly.com/community/profiles/codek9" target="_blank" rel="noopener">Music Beats</a></li>
+    </ul>
+  </section>
+
+  {% assign all_categories = "" | split: "" %}
+  {% for post in site.posts %}
+    {% if post.categories %}
+      {% assign cat = post.categories | first %}
+      {% unless all_categories contains cat %}
+        {% assign all_categories = all_categories | push: cat %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  {% assign all_categories = all_categories | sort %}
+  {% if all_categories.size > 0 %}
+  <section class="sidebar-section">
+    <h2 class="sidebar-title">Categories</h2>
+    <ul class="category-list">
+      <li>
+        <button type="button" class="category-chip is-active" data-category="all">All</button>
+      </li>
+      {% for category in all_categories %}
+      <li>
+        <button type="button" class="category-chip" data-category="{{ category | downcase }}">{{ category }}</button>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <section class="sidebar-section sidebar-about">
+    <h2 class="sidebar-title">About</h2>
+    <p>개발·DevOps·인프라를 다루는 기술 블로그입니다.</p>
+  </section>
+</aside>

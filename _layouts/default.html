@@ -1,123 +1,48 @@
 <!DOCTYPE html>
 <html lang="{{ site.locale }}">
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/print.css" media="print" />
+<head>
+  {% include head.html %}
+  {% include analytics.html %}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <title> {{ page.title }} </title>
-  </head>
-
-  <body>
-    <header>
-      <div class="inner">
-        <h1> {{ site.name }} </h1>
-        <h2>DK 기술 블로그</h2>
-        <a href="https://kdkrkwhr.github.io" style="padding-left:90px;" class="button"><small>Technology Blog .</small>Dong Ki</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="{{ '/' | relative_url }}" class="brand-link">
+          <span class="brand-name">{{ site.name }}</span>
+          <span class="brand-tagline">{{ site.tagline }}</span>
+        </a>
       </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="{{ '/' | relative_url }}">Posts</a>
+        <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a>
+      </nav>
 
-          {{ content }}
-
-        </section>
-
-        <aside id="sidebar">
-          <p><a href="https://github.com/kdkrkwhr">GitHub Pages</a>.</p>
-          <p><a href="https://www.linkedin.com/in/dong-ki-kim-027328188/">Linked-in Connect .</a>.</p>
-          <p><a href="https://www.loudly.com/community/profiles/codek9">My Music beat source</a>.</p>
-          <section class="category">
-            <strong style="color:#8ecf63;font-size:18px;">CATEGORY</strong>
-              <ul style="list-style: none;">
-                <li style="padding-bottom: 5px;">
-                  <a class="bold" href="#">
-                    Interview
-                  </a>
-                </li>
-                  <a class="bold" href="#">
-                  </a>
-                <li style="padding-bottom: 5px;">
-                  <a class="bold" href="#">
-                    Tools
-                  </a>
-                </li>
-                  <a class="bold" href="">
-                  </a>
-                <li style="padding-bottom: 5px;">
-                  <a class="bold" href="">
-                    DevOps
-                  </a>
-                </li>
-                  <a class="bold" href="#">
-                  </a>
-                <li style="padding-bottom: 5px;">
-                  <a class="bold" href="#">
-                    Technology
-                  </a>
-                </li>
-                  <a class="bold" href="#">
-                  </a>
-                <li style="padding-bottom: 5px;">
-                  <a class="bold" href="#">
-                    New Technology
-                </a>
-                </li>
-                  <a class="bold" href="#">
-                  </a>
-                <li style="padding-bottom: 5px;">
-                  <a class="bold" href="#">
-                    Language
-                  </a>
-                </li>
-                  <a class="bold" href="#">
-                  </a>
-                <li style="padding-bottom: 5px;">
-                  <a class="bold" href="#">
-                    Development 
-                  </a>
-                </li>
-                  <a class="bold" href="#">
-                  </a>
-                <li style="padding-bottom: 5px;">
-                  <a class="bold" href="#">
-                    Infra
-                  </a>
-                </li>
-                  <a class="bold" href="#">
-                  </a>
-                <li style="padding-bottom: 5px;">
-                  <a class="bold" href="#">
-                    Security
-                  </a>
-                </li>
-                  <a class="bold" href="#">
-                  </a>
-                <li style="padding-bottom: 5px;">
-                  <a class="bold" href="#">
-                    Conference
-                  </a>
-                </li>
-                  <a class="bold" href="#">
-                    Notice
-                  </a>
-                </li>
-            </ul>
-          </section>
-        <!-- End Menu --> 
-        </aside>
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="테마 전환">
+          <span class="theme-icon theme-icon-light" aria-hidden="true">☀</span>
+          <span class="theme-icon theme-icon-dark" aria-hidden="true">☾</span>
+        </button>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
-  </body>
+  </header>
+
+  <div class="container site-body">
+    <main id="main-content" class="main-content">
+      {{ content }}
+    </main>
+    {% include sidebar.html %}
+  </div>
+
+  {% include footer.html %}
+  <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
+</body>
 </html>

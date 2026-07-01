@@ -3,13 +3,63 @@ layout: default
 title: DK 기술 블로그
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
+<section class="home-hero">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>
+</section>
+
+<section class="post-list-section">
+  <div class="section-header">
+    <h2>Recent Posts</h2>
+    <p class="post-count">{{ site.posts.size }} articles</p>
+  </div>
+
+  <ul class="post-grid" id="post-grid">
     {% for post in site.posts %}
-      <li style="padding: 5px;"><span>{{ post.date | date_to_string }}</span> &raquo; 
-        <strong><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></strong>
-      </li>
+    <li class="post-card" data-category="{{ post.categories | first | downcase }}">
+      <a href="{{ post.url | relative_url }}" class="post-card-link">
+        <div class="post-card-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+          {% if post.categories %}
+            <span class="post-card-category">{{ post.categories | first }}</span>
+          {% endif %}
+        </div>
+        <h3 class="post-card-title">{{ post.title }}</h3>
+        {% if post.excerpt %}
+          <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        {% endif %}
+        <span class="post-card-cta">Read more →</span>
+      </a>
+    </li>
     {% endfor %}
   </ul>
-</div>
+
+  <p class="empty-state" id="empty-state" hidden>해당 카테고리의 글이 없습니다.</p>
+</section>
+
+<script>
+  (function () {
+    var chips = document.querySelectorAll('.category-chip');
+    var cards = document.querySelectorAll('.post-card');
+    var empty = document.getElementById('empty-state');
+    if (!chips.length || !cards.length) return;
+
+    function filter(category) {
+      var visible = 0;
+      cards.forEach(function (card) {
+        var match = category === 'all' || card.dataset.category === category;
+        card.hidden = !match;
+        if (match) visible++;
+      });
+      if (empty) empty.hidden = visible > 0;
+    }
+
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.classList.remove('is-active'); });
+        chip.classList.add('is-active');
+        filter(chip.dataset.category);
+      });
+    });
+  })();
+</script>

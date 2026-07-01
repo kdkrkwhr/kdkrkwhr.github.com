@@ -1,29 +1,27 @@
-# Setup
-name: 
-  Tec-Blog
-tagline: 
-  blog
-baseurl: 
-  "https://kdkrkwhr.github.io"
-locale: 
-  "ko"
+# Site
+title: DK 기술 블로그
+name: Tec-Blog
+tagline: Technology & DevOps
+description: 김동기의 개발·인프라·기술 이야기
+locale: ko
+url: https://kdkrkwhr.github.io
+baseurl: ""
 
-# Gems
-gems:
+# Author
+author:
+  name: Kim, DongKi
+  github: kdkrkwhr
+  linkedin: dong-ki-kim-027328188
+
+# Build
+markdown: kramdown
+highlighter: rouge
+
+plugins:
   - jekyll-paginate
 
-#Others
-markdown: 
-  kramdown
-
-disqus_shortname: 'https-kdkrkwhr-github-io'
-
-disqus-identifier: 
-  https-kdkrkwhr-github-io
-
-comments:
-  disqus:
-    shortname: https-kdkrkwhr-github-io
+# Comments
+disqus_shortname: https-kdkrkwhr-github-io
 
 # Analytics
 analytics:
@@ -31,5 +29,3 @@ analytics:
   google:
     tracking_id: G-PEYQZC0NSH
     anonymize_ip: false
-
-theme: jekyll-theme-tactile

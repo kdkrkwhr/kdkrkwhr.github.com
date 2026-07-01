@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta name="author" content="{{ site.author.name }}">
+
+<link rel="shortcut icon" href="{{ '/assets/favicon.ico' | relative_url }}" type="image/x-icon">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
+<link rel="stylesheet" href="{{ '/stylesheets/stylesheet.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/stylesheets/pygment_trac.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/stylesheets/print.css' | relative_url }}" media="print">
+
+<script>
+  (function () {
+    var stored = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.dataset.theme = stored || (prefersDark ? 'dark' : 'light');
+  })();
+</script>
+
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
