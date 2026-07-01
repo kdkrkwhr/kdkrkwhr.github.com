@@ -23,6 +23,14 @@
       "published_at": "2026-07-01"
     },
     {
+      "id": "ai-e2e-ouroboros",
+      "title": "AI E2E 워크플로우 — Ouroboros 패턴으로 맥락을 잃지 않기",
+      "category": "AI",
+      "outline": "10단계 E2E 루프, Ouroboros 5단계, L1~L4 Harness, SSoT, Hermes cron 연동",
+      "status": "published",
+      "published_at": "2026-07-01"
+    },
+    {
       "id": "ai-coding-agents",
       "title": "AI 코딩 에이전트 비교 — Cursor, Claude Code, Copilot",
       "category": "AI",
