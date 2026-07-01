@@ -38,7 +38,7 @@ title: DK 기술 블로그
 </section>
 
 <script>
-  (function () {
+  document.addEventListener('DOMContentLoaded', function () {
     var chips = document.querySelectorAll('.category-chip');
     var cards = document.querySelectorAll('.post-card');
     var empty = document.getElementById('empty-state');
@@ -61,5 +61,5 @@ title: DK 기술 블로그
         filter(chip.dataset.category);
       });
     });
-  })();
+  });
 </script>
