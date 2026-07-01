@@ -1,0 +1,1 @@
+Blog auto-post job for kdkrkwhr Jekyll repo. Follow .hermes/cron-prompt.txt exactly. Read .hermes/blog-topics.json for next pending topic, write post per .hermes/blog-style-guide.md matching existing _posts/ style. No company/internal info. Commit and push to origin master if auto_push is true. Report title, file path, remaining pending count.

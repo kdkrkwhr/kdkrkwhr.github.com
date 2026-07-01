@@ -1,0 +1,23 @@
+블로그 자동 포스팅 작업. workdir는 kdkrkwhr Jekyll 블로그 repo다.
+
+## 절차
+
+1. `.hermes/blog-topics.json` 읽기
+2. `status`가 `pending`인 첫 토픽 1개 선택 (posts_per_run 만큼, 기본 1)
+3. `.hermes/blog-style-guide.md` 와 `_posts/` 기존 글 1~2개 참고해 스타일 맞추기
+4. settings.forbidden 항목(회사·내부 정보) 절대 포함 금지
+5. `_posts/YYYY-MM-DD-<slug>.md` 작성 (slug는 토픽 id 또는 영문 kebab-case)
+6. 해당 토픽 status를 published로, published_at에 ISO 날짜 추가
+7. settings.auto_push가 true면 git add, commit, push origin master
+8. pending 토픽이 없으면 "작성할 토픽 없음"만 보고하고 종료
+
+## 출력
+
+- 발행한 글 제목, 파일 경로, GitHub Pages URL (https://kdkrkwhr.github.io)
+- 남은 pending 토픽 수
+- push 실패 시 에러 내용
+
+## 주의
+
+- 이미지는 이번 실행에서 생성하지 않음
+- Jekyll front matter 형식 정확히 지킬 것

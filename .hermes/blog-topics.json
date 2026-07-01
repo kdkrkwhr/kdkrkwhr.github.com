@@ -1,0 +1,74 @@
+{
+  "settings": {
+    "author": "Kim, DongKi",
+    "default_category": "AI",
+    "posts_per_run": 1,
+    "auto_push": true,
+    "forbidden": [
+      "회사명",
+      "내부 시스템명",
+      "고객사",
+      "실명 동료",
+      "내부 URL/인프라",
+      "기밀 프로젝트"
+    ]
+  },
+  "topics": [
+    {
+      "id": "hermes-agent-intro",
+      "title": "Hermes Agent로 로컬 AI 자동화하기",
+      "category": "AI",
+      "outline": "Hermes란, 설치·프로필, cron·스킬, Discord 연동 개요",
+      "status": "pending"
+    },
+    {
+      "id": "ai-coding-agents",
+      "title": "AI 코딩 에이전트 비교 — Cursor, Claude Code, Copilot",
+      "category": "AI",
+      "outline": "각 도구 강점·약점, 실사용 시나리오, 선택 기준",
+      "status": "pending"
+    },
+    {
+      "id": "llm-api-guide",
+      "title": "LLM API 서비스 선택 가이드",
+      "category": "AI",
+      "outline": "OpenAI/Anthropic/로컬(Ollama 등), 비용·지연·프라이버시 트레이드오프",
+      "status": "pending"
+    },
+    {
+      "id": "hermes-cron-workflow",
+      "title": "Hermes cron으로 반복 작업 자동화하기",
+      "category": "AI",
+      "outline": "cronjob 생성, workdir·스킬·deliver, watchdog vs agent 모드",
+      "status": "pending"
+    },
+    {
+      "id": "discord-hermes-bot",
+      "title": "Discord + Hermes 봇 운영 실전 팁",
+      "category": "AI",
+      "outline": "멀티봇 환경, wind-down, 멘션 루프 방지 (회사 정보 없이 일반 팁만)",
+      "status": "pending"
+    },
+    {
+      "id": "acp-protocol",
+      "title": "ACP(Agent Client Protocol) 이해하기",
+      "category": "AI",
+      "outline": "ACP 개념, Hermes·Cursor 연동, 언제 쓰는지",
+      "status": "pending"
+    },
+    {
+      "id": "hermes-skills",
+      "title": "Hermes 스킬(Skill) 작성과 관리",
+      "category": "AI",
+      "outline": "스킬 구조, skill_manage, 재사용 워크플로",
+      "status": "pending"
+    },
+    {
+      "id": "local-llm-ollama",
+      "title": "로컬 LLM(Ollama)로 에이전트 돌리기",
+      "category": "AI",
+      "outline": "설치, 모델 선택, Hermes provider 연결",
+      "status": "pending"
+    }
+  ]
+}
