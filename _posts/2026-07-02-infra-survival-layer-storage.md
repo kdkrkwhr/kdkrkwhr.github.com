@@ -2,7 +2,7 @@
 layout: post
 author: Kim, DongKi
 title:  "온프레미스 인프라 학습 ① — 계층 구조와 스토리지"
-date:   2026-07-01
+date:   2026-07-02
 categories: devOps
 comments: true
 ---
