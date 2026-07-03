@@ -43,7 +43,8 @@
       "title": "온프레미스 인프라 학습 ② — 가상화·OS·네트워크",
       "category": "devOps",
       "outline": "VMware/LPAR, vCPU/Datastore, OS 성능 도구, L2/L3·Latency, 2주차 로드맵",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-07-03"
     },
     {
       "id": "infra-survival-db-backup-ops",
