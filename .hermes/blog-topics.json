@@ -51,7 +51,8 @@
       "title": "온프레미스 인프라 학습 ③ — DB·백업·운영과 흔한 착각",
       "category": "devOps",
       "outline": "RAC/ASM, NetBackup, MOP/CMDB, 착각 패턴, 시리즈 마무리",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-07-04"
     },
     {
       "id": "ssot-why-and-structure",
