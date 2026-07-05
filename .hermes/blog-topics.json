@@ -59,7 +59,8 @@
       "title": "Git SSoT ① — 왜 하나의 맥락을 쌓는가",
       "category": "AI",
       "outline": "SSoT 개념, adr/rfc/spec/prd/policy, scope·폴더, E2E ⑦·티켓 링크, ouroboros 글 심화",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-07-05"
     },
     {
       "id": "ssot-ops-and-validation",
