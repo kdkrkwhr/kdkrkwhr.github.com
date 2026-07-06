@@ -1,0 +1,38 @@
+블로그 E2E 워크플로우 글 1회 발행. workdir는 kdkrkwhr Jekyll 블로그 repo.
+
+## 대상 토픽
+
+- id: ai-e2e-ouroboros
+- title: AI E2E 워크플로우 — Ouroboros 패턴으로 맥락을 잃지 않기
+- category: AI
+
+## 절차
+
+1. `.hermes/e2e-source-brief.md` 읽기 (핵심 소스)
+2. 필요 시 `D:\develop\project_management\docs\ai-e2e-workflow-presentation\index.html`에서 추가 맥락만 참고 (전체 HTML 파싱 불필요)
+3. `.hermes/blog-style-guide.md` 와 `_posts/2026-07-01-hermes-agent-intro.md` 스타일 맞추기
+4. `.hermes/blog-topics.json`의 settings.forbidden(회사·내부 정보) 절대 포함 금지 — 개인 학습·오픈소스 도구 경험으로 일반화
+5. `_posts/2026-07-02-ai-e2e-ouroboros.md` 작성 (date는 2026-07-02)
+6. `blog-topics.json`에서 ai-e2e-ouroboros 토픽 status를 published, published_at 2026-07-02
+7. git add, commit, push origin master
+
+## 본문 필수 섹션
+
+- TL;DR (3~5줄)
+- 들어가며 — "채팅만 하면 맥락이 사라진다" 문제의식
+- E2E 10단계 루프 개요 (표 또는 리스트)
+- 아키텍처 4계층 + SSoT 횡단
+- Ouroboros 5단계와 L1~L4 매핑
+- Hermes·cron·Skills가 루프에서 맡는 역할 (일반 예시)
+- 마무리 — 개인 프로젝트에 적용할 때 팁 2~3개
+
+## 분량·형식
+
+- 1500~3000자 권장
+- Mermaid 다이어그램 1~2개 환영 (10단계 루프 또는 Ouroboros)
+- 이미지 생성하지 않음
+
+## 출력
+
+- 발행한 글 제목, 파일 경로, https://kdkrkwhr.github.io 링크
+- push 결과

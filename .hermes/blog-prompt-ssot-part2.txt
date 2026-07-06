@@ -1,0 +1,45 @@
+블로그 Git SSoT 시리즈 2/2 발행. workdir는 kdkrkwhr Jekyll 블로그 repo.
+
+## 대상 토픽
+
+- id: ssot-ops-and-validation
+- title: Git SSoT ② — 운영·검증·LLM 컨텍스트 다이어트
+- category: AI
+
+## 소스
+
+- `.hermes/ssot-source-brief.md` — 2편 각도 전체
+- `D:\develop\git\agent-skill\shared\mediplexus-e2e\workflows\validate-ssot.md` — 검수 절차 (일반화)
+- `D:\develop\git\agent-skill\shared\mediplexus-e2e\workflows\convert-to-ssot.md` — 초안 변환 (일반화)
+- 1편 `_posts/2026-07-05-ssot-why-and-structure.md` 톤 맞추기
+
+## 절차
+
+1. 위 소스 읽기
+2. `.hermes/blog-style-guide.md` 준수
+3. settings.forbidden 준수 — 회사·내부 시스템·조직 repo URL 금지
+4. `_posts/2026-07-06-ssot-ops-and-validation.md` 작성 (date는 2026-07-06)
+5. `blog-topics.json`에서 ssot-ops-and-validation 토픽 published, published_at 2026-07-06
+6. git add, commit, push origin master
+
+## 본문 필수 섹션
+
+- TL;DR — validate 게이트, INDEX 요약, 한 사실 한 곳
+- 들어가며 — 1편(구조) 이어서 운영 실전
+- front matter 필수 필드 요약 (yaml 예시 1블록)
+- validate-ssot가 막는 것 — 표 (메타·type-path·ADR 대안·PRD AC 등)
+- FAQ 2~3개 ("SSoT 무거워지면 LLM도?", "채팅에 이미 있는데?")
+- 컨텍스트 다이어트 — INDEX→요약→Agent (창고 vs 서랍 비유, mermaid 1개)
+- 읽기·쓰기 주체별 표 (Agent / cron / CI)
+- convert-to-ssot 흐름 (drafts → 검토 → 정식 commit) — 짧게
+- supersedes·archived로 정본 유지
+- 마무리 — 개인 프로젝트 SSoT 시작 팁 2~3개 (templates 복사, validate 로컬 실행 등)
+
+## 분량·형식
+
+- 1800~2800자, categories: AI
+- 이미지 생성하지 않음
+
+## 출력
+
+- 제목, 파일 경로, https://kdkrkwhr.github.io 링크, push 결과

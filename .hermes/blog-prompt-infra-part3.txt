@@ -1,0 +1,41 @@
+블로그 인프라 학습 시리즈 3/3 발행. workdir는 kdkrkwhr Jekyll 블로그 repo.
+
+## 대상 토픽
+
+- id: infra-survival-db-backup-ops
+- title: 온프레미스 인프라 학습 ③ — DB·백업·운영과 흔한 착각
+- category: devOps
+
+## 소스
+
+- `D:\develop\project_management\인프라_학습_용어와_구조.md` — ② DB·백업·운영, ③ 3~4주차 로드맵, ④ 착각 패턴, ⑤ 핵심 에피소드
+- 출처 [인프라 생존기](https://infra-survival.tistory.com/) 링크 유지 OK
+
+## 절차
+
+1. 위 소스 해당 섹션 읽기
+2. `.hermes/blog-style-guide.md` 와 1~2편 톤 맞추기
+3. settings.forbidden 준수 — allRe·병원·사내 fact DB 등 **내부 프로젝트 매핑 표는 제외**하고, 4주차 로드맵은 "개인 프로젝트에 적용" 수준으로 일반화
+4. `_posts/2026-07-04-infra-survival-db-backup-ops.md` 작성 (date는 2026-07-04)
+5. `blog-topics.json`에서 infra-survival-db-backup-ops 토픽 published, published_at 2026-07-04
+6. git add, commit, push origin master
+
+## 본문 필수 섹션
+
+- TL;DR — 스냅샷≠백업, MOP·CMDB, 로그와 숫자
+- 들어가며 — 시리즈 3편 마무리, 운영·거버넌스가 왜 중요한지
+- DB (일반 Oracle 맥락): RAC/ASM, Alert log vs OS log, 복구 중 scope creep
+- 백업·운영: NetBackup, 스냅샷 착각, MOP, APM, Inventory/CMDB
+- 자주 나오는 착각 6가지 (레이어 무시, 절대값 착각, 용어장난 등) — 표
+- 핵심 에피소드 바로가기 (압축 표)
+- 3~4주차 로드맵 (운영·거버넌스 + 개인 프로젝트 연결 — 일반화)
+- 마무리 — "인프라는 정직하다" 한 줄 + 심화 자료 링크 2~3개
+
+## 분량·형식
+
+- 1800~2800자, categories: devOps
+- 이미지 생성하지 않음
+
+## 출력
+
+- 제목, 파일 경로, https://kdkrkwhr.github.io 링크, push 결과

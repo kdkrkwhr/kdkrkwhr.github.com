@@ -1,0 +1,40 @@
+블로그 인프라 학습 시리즈 2/3 발행. workdir는 kdkrkwhr Jekyll 블로그 repo.
+
+## 대상 토픽
+
+- id: infra-survival-virt-os-net
+- title: 온프레미스 인프라 학습 ② — 가상화·OS·네트워크
+- category: devOps
+
+## 소스
+
+- `D:\develop\project_management\인프라_학습_용어와_구조.md` — ② 가상화, OS·Unix/Linux, 네트워크, ③ 2주차 로드맵
+- 출처 [인프라 생존기](https://infra-survival.tistory.com/) 링크 유지 OK
+
+## 절차
+
+1. 위 소스 파일 해당 섹션 읽기
+2. `.hermes/blog-style-guide.md` 와 1편 `_posts/2026-07-02-infra-survival-layer-storage.md` 톤 맞추기
+3. settings.forbidden 준수 — 회사·내부 프로젝트 언급 금지
+4. `_posts/2026-07-03-infra-survival-virt-os-net.md` 작성 (date는 2026-07-03)
+5. `blog-topics.json`에서 infra-survival-virt-os-net 토픽 published, published_at 2026-07-03
+6. git add, commit, push origin master
+
+## 본문 필수 섹션
+
+- TL;DR — Physical vs Logical, vCPU 착각, Latency vs Bandwidth
+- 들어가며 — 1편(스토리지 계층)과 이어지는 맥락 한 단락
+- 가상화 (VMware/LPAR): vCPU, Datastore, Thin/Thick, vMotion, LPAR
+- OS·Unix/Linux: du/inode, Swap, nmon, grep/kill, crontab
+- 네트워크: Port Down/CRC, Latency vs Bandwidth, L2/L3
+- 2주차 로드맵 (글 11~13, 17~22, 44~50)
+- 마무리 — 3편 예고 (DB·백업·운영)
+
+## 분량·형식
+
+- 1500~2500자, categories: devOps
+- 이미지 생성하지 않음
+
+## 출력
+
+- 제목, 파일 경로, https://kdkrkwhr.github.io 링크, push 결과

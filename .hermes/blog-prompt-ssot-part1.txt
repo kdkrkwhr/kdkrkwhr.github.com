@@ -1,0 +1,42 @@
+블로그 Git SSoT 시리즈 1/2 발행. workdir는 kdkrkwhr Jekyll 블로그 repo.
+
+## 대상 토픽
+
+- id: ssot-why-and-structure
+- title: Git SSoT ① — 왜 하나의 맥락을 쌓는가
+- category: AI
+
+## 소스
+
+- `.hermes/ssot-source-brief.md` — 1편 각도 전체
+- `_posts/2026-07-01-ai-e2e-ouroboros.md` — E2E ⑦ SSoT 언급 (중복 최소화, 심화만)
+- 필요 시 `D:\develop\ssot\README.md` 구조·타입 표만 참고 (회사명·조직 repo URL 금지)
+
+## 절차
+
+1. 위 소스 읽기
+2. `.hermes/blog-style-guide.md` 와 ouroboros 글 톤 맞추기
+3. settings.forbidden 준수 — mediplexus·allRe·병원·사내 프로젝트·내부 GitHub org 언급 없이 **개인/소규모 팀 Git SSoT**로 일반화
+4. `_posts/2026-07-05-ssot-why-and-structure.md` 작성 (date는 2026-07-05)
+5. `blog-topics.json`에서 ssot-why-and-structure 토픽 status published, published_at 2026-07-05
+6. git add, commit, push origin master
+
+## 본문 필수 섹션
+
+- TL;DR — 채팅≠기억, Git 정본, 티켓은 링크만
+- 들어가며 — ouroboros 글 이어서 "SSoT만 파보자"
+- SSoT가 필요한 이유 (채팅 소멸, 에이전트·cron 공유 맥락)
+- 문서 타입 5종 (adr/rfc/spec/prd/policy) — 표
+- scope·폴더 구조 — 코드 블록 트리
+- E2E 루프에서 SSoT 위치 (⑦ 쓰기, ①② 읽기) — mermaid 1개
+- 티켓 vs SSoT 역할 분리 — 표
+- 마무리 — 2편 예고 (validate·컨텍스트 다이어트)
+
+## 분량·형식
+
+- 1800~2500자, categories: AI
+- 이미지 생성하지 않음
+
+## 출력
+
+- 제목, 파일 경로, https://kdkrkwhr.github.io 링크, push 결과
