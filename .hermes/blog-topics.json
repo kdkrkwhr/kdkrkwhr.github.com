@@ -67,7 +67,8 @@
       "title": "Git SSoT ② — 운영·검증·LLM 컨텍스트 다이어트",
       "category": "AI",
       "outline": "validate-ssot, front matter, INDEX 요약, convert-to-ssot, supersedes, FAQ",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-07-06"
     },
     {
       "id": "ai-coding-agents",
