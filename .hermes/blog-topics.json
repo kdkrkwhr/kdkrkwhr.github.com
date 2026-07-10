@@ -75,7 +75,8 @@
       "title": "AI 코딩 에이전트 비교 — Cursor, Claude Code, Copilot",
       "category": "AI",
       "outline": "각 도구 강점·약점, 실사용 시나리오, 선택 기준",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-07-10"
     },
     {
       "id": "llm-api-guide",
