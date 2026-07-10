@@ -83,7 +83,8 @@
       "title": "LLM API 서비스 선택 가이드",
       "category": "AI",
       "outline": "OpenAI/Anthropic/로컬(Ollama 등), 비용·지연·프라이버시 트레이드오프",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-07-10"
     },
     {
       "id": "hermes-cron-workflow",
