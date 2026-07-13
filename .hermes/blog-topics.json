@@ -99,7 +99,8 @@
       "title": "Discord + Hermes 봇 운영 실전 팁",
       "category": "AI",
       "outline": "멀티봇 환경, wind-down, 멘션 루프 방지 (회사 정보 없이 일반 팁만)",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-07-13"
     },
     {
       "id": "acp-protocol",
