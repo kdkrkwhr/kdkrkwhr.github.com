@@ -91,7 +91,8 @@
       "title": "Hermes cron으로 반복 작업 자동화하기",
       "category": "AI",
       "outline": "cronjob 생성, workdir·스킬·deliver, watchdog vs agent 모드",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-07-13"
     },
     {
       "id": "discord-hermes-bot",
