@@ -275,7 +275,7 @@ a:hover { color: var(--color-accent-hover); }
 }
 
 .home-hero-media {
-  aspect-ratio: 16 / 9;
+  height: clamp(140px, 22vw, 220px);
   background: #0a1628;
 }
 
@@ -284,7 +284,7 @@ a:hover { color: var(--color-accent-hover); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 40%;
 }
 
 .home-hero-copy {
