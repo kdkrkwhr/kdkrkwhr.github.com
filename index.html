@@ -20,6 +20,33 @@ title: DK 기술 블로그
   </div>
 </section>
 
+{% if site.data.projects and site.data.projects.size > 0 %}
+<section class="projects-section" id="projects" aria-labelledby="projects-heading">
+  <div class="section-header">
+    <h2 id="projects-heading">Projects</h2>
+    <p class="post-count">{{ site.data.projects.size }} apps</p>
+  </div>
+  <ul class="project-grid">
+    {% for project in site.data.projects %}
+    <li class="project-card">
+      <a href="{{ project.url }}" class="project-card-link" target="_blank" rel="noopener">
+        <div class="project-card-meta">
+          {% if project.tag %}<span class="post-card-category">{{ project.tag }}</span>{% endif %}
+          <span class="project-card-host">GitHub Pages</span>
+        </div>
+        <h3 class="project-card-title">{{ project.title }}</h3>
+        <p class="project-card-excerpt">{{ project.description }}</p>
+        <span class="post-card-cta">Open app →</span>
+      </a>
+      {% if project.repo %}
+      <a class="project-repo-link" href="{{ project.repo }}" target="_blank" rel="noopener">소스 보기</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
 <section class="post-list-section">
   <div class="section-header">
     <h2>Recent Posts</h2>

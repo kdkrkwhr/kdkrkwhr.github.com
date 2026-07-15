@@ -416,6 +416,86 @@ a:hover { color: var(--color-accent-hover); }
   color: var(--color-text-muted);
 }
 
+/* Projects (GitHub Pages apps) */
+.projects-section {
+  margin-bottom: 2.5rem;
+}
+
+.project-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.project-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+.project-card-link {
+  display: block;
+  padding: 1.25rem 1.5rem 2.5rem;
+  color: inherit;
+}
+
+.project-card-link:hover { color: inherit; }
+
+.project-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.625rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.project-card-host {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.project-card-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.project-card-excerpt {
+  margin: 0 0 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.project-repo-link {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 0.9rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.project-repo-link:hover {
+  color: var(--color-accent);
+}
+
 /* Post page */
 .post {
   max-width: var(--content-width);

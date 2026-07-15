@@ -1,4 +1,15 @@
 <aside class="sidebar" id="sidebar">
+  {% if site.data.projects and site.data.projects.size > 0 %}
+  <section class="sidebar-section">
+    <h2 class="sidebar-title">Projects</h2>
+    <ul class="sidebar-links">
+      {% for project in site.data.projects %}
+      <li><a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
   <section class="sidebar-section">
     <h2 class="sidebar-title">Connect</h2>
     <ul class="sidebar-links">

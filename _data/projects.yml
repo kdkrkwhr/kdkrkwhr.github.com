@@ -1,0 +1,14 @@
+# GitHub Pages apps linked from the blog home / sidebar
+- id: attendance-pwa
+  title: 출퇴근 체크 PWA
+  tag: PWA
+  url: https://kdkrkwhr.github.io/attendance-pwa/
+  repo: https://github.com/kdkrkwhr/attendance-pwa
+  description: 서버 없이 돌아가는 자율출퇴근 관리. GitHub Pages에서 바로 씀.
+
+- id: hermes-agent-area
+  title: Hermes Agent Area
+  tag: Live
+  url: https://kdkrkwhr.github.io/hermes-agent-area/
+  repo: https://github.com/kdkrkwhr/hermes-agent-area
+  description: Hermes 멀티 에이전트를 2D 가상 사무실에서 실시간 모니터링.
