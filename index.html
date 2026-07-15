@@ -4,16 +4,16 @@ title: DK 기술 블로그
 ---
 
 <section class="home-hero">
-  <div class="home-hero-media">
-    <img
-      src="{{ '/assets/images/whale-hero.jpg' | relative_url }}"
-      alt="심해를 가로지르는 대왕고래"
-      width="1600"
-      height="360"
-      decoding="async"
-      fetchpriority="high"
-    >
-  </div>
+  <img
+    class="home-hero-bg"
+    src="{{ '/assets/images/whale-hero.jpg' | relative_url }}"
+    alt=""
+    width="1600"
+    height="360"
+    decoding="async"
+    fetchpriority="high"
+    aria-hidden="true"
+  >
   <div class="home-hero-copy">
     <h1>{{ site.title }}</h1>
     <p>{{ site.description }}</p>
