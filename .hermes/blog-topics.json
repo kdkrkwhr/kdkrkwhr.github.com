@@ -115,7 +115,8 @@
       "title": "Hermes 스킬(Skill) 작성과 관리",
       "category": "AI",
       "outline": "스킬 구조, skill_manage, 재사용 워크플로",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-07-19"
     },
     {
       "id": "local-llm-ollama",
