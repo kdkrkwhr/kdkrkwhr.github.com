@@ -48,8 +48,6 @@ Orca를 켜면 레포를 “워크스페이스”로 등록하고, 브랜치(또
 
 사이드바에는 레포 카드가 한눈에 모인다.
 
-![Orca 사이드바 — 레포 목록](/assets/2026-07-20-orca-repos.png)
-
 CLI로 상태를 보면 worktree 목록과 에이전트 타입(`hermes`, `claude` 등)이 JSON으로 나온다.
 
 ```bash
