@@ -123,7 +123,8 @@
       "title": "로컬 LLM(Ollama)로 에이전트 돌리기",
       "category": "AI",
       "outline": "설치, 모델 선택, Hermes provider 연결",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-07-20"
     }
   ]
 }
