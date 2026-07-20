@@ -45,18 +45,22 @@ Orca를 켜면 레포를 “워크스페이스”로 등록하고, 브랜치(또
 * Git SSoT 레포 — 스펙·DDL 정리용 셸
 * 레거시 백엔드 / TTS 엔진 레포 — 브랜치별로 분리
 
+사이드바에는 레포 카드가 한눈에 모인다.
+
+![Orca 사이드바 — 레포 목록](/assets/2026-07-20-orca-repos.png)
+
 CLI로 상태를 보면 worktree 목록과 에이전트 타입(`hermes`, `claude` 등)이 JSON으로 나온다.
 
 ```bash
-# Orca CLI (Windows 설치 경로 예시)
-"C:\Users\<user>\AppData\Local\Programs\orca\resources\bin\orca.exe" worktree ps --json
+# Orca CLI (설치본 내 index.js 경로 예시)
+node "%LOCALAPPDATA%/Programs/orca/resources/app.asar.unpacked/out/cli/index.js" worktree ps --json
 ```
 
-**에이전트 패널** — 워크스페이스별로 “Run the project” 같은 작업 카드가 쌓이고, Claude/Hermes 세션 상태·메시지 수·마지막 활동 시각이 보인다.
+**에이전트 패널** — 워크스페이스별로 작업 카드가 쌓이고, Claude/Hermes 세션 상태·메시지 수·마지막 활동 시각이 보인다.
 
 ![Orca 에이전트 패널 — 워크스페이스별 세션](/assets/images/orca/orca-agent-panel.png)
 
-스크린샷에 터미널 출력(JWT·DB 비밀번호 등)이 잡히지 않게 **UI 영역만** 잘라 썼다. 블로그에 전체 화면을 그대로 올리면 안 된다.
+스크린샷에 터미널 출력(JWT·DB 비밀번호 등)이 잡히지 않게 **UI 영역만** 잘라 썼다. 전체 화면 캡처는 블로그에 그대로 올리면 안 된다.
 
 ----
 
@@ -103,7 +107,7 @@ X-Orca-Agent-Hook-Token: ...
 
 Orca는 **“클라우드 멀티프로토콜”** 이 아니라 **데스크톱 ADE**다. 나는 Discord·Hermes·Cursor·Claude·Nous를 유지한 채, **코딩만 Orca 화면으로 모았다**. 디스코 대체재가 아니라 **옆자리 함대 컨트롤러**로 두는 게 맞다.
 
-다음에 다루고 싶은 건 Orca 밑 레이어 — **워크스페이스 계약·세션 제어·행동 영수증** 같은, ADE들이 아직 표준화하지 못한 얇은 프로토콜이다. (이전 글에서 말한 Agent Action Receipt / Approval Relay와 이어진다.)
+다음에 다루고 싶은 건 Orca 밑 레이어 — **워크스페이스 계약·세션 제어·행동 영수증** 같은, ADE들이 아직 표준화하지 못한 얇은 프로토콜이다.
 
 ----
 
