@@ -2,7 +2,8 @@
 layout: post
 author: Kim, DongKi
 title:  "Orca ADE로 코딩 에이전트 함대 운영하기 — Discord·Hermes와 병행"
-date:   2026-07-21
+date:   2026-07-20
+permalink: /2026/07/20/orca-ade-workflow.html
 categories: AI
 comments: true
 ---
