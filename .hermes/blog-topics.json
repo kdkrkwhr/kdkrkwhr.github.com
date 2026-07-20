@@ -125,6 +125,14 @@
       "outline": "설치, 모델 선택, Hermes provider 연결",
       "status": "published",
       "published_at": "2026-07-20"
+    },
+    {
+      "id": "orca-ade-workflow",
+      "title": "Orca ADE로 코딩 에이전트 함대 운영하기",
+      "category": "AI",
+      "outline": "Discord·Hermes 병행, worktree·에이전트 탭, orca-status 연동",
+      "status": "published",
+      "published_at": "2026-07-21"
     }
   ]
 }
