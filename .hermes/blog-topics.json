@@ -133,6 +133,14 @@
       "outline": "Discord·Hermes 병행, worktree·에이전트 탭, orca-status 연동",
       "status": "published",
       "published_at": "2026-07-20"
+    },
+    {
+      "id": "agent-soul-md-behavior-enforcement",
+      "title": "AI 에이전트 행동 규칙 강제하기 — SOUL.md를 맨 위로 올린 이유",
+      "category": "AI",
+      "outline": "SOUL.md 최상단 배치로 review-required block 루프 해결, 프롬프트 위치/가시성",
+      "status": "published",
+      "published_at": "2026-07-22"
     }
   ]
 }
