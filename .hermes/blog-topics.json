@@ -147,7 +147,12 @@
       "title": "노션·지라 아침 브리핑 cron 만들기 — Discord로 받는 실전 루틴",
       "category": "AI",
       "outline": "Hermes cron 후속편. no_agent 스크립트로 Jira/Notion 일정 조회→섹션 분류→Discord deliver. 평일 크론, 빈 결과 SILENT, 시크릿은 env. 회사·보드 URL 일반화",
+<<<<<<< HEAD
       "status": "pending"
+=======
+      "status": "published",
+      "published_at": "2026-07-27"
+>>>>>>> 2655def (blog: 노션·지라 아침 브리핑 cron 실전 루틴)
     }
   ]
 }
