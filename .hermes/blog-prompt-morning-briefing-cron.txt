@@ -1,0 +1,42 @@
+블로그 아침 브리핑 cron 글 1회 발행. workdir는 kdkrkwhr Jekyll 블로그 repo.
+
+## 대상 토픽
+
+- id: morning-briefing-cron-notion-jira
+- title: 노션·지라 아침 브리핑 cron 만들기 — Discord로 받는 실전 루틴
+- category: AI
+- 선행 글: `_posts/2026-07-13-hermes-cron-workflow.md`, `_posts/2026-07-13-discord-hermes-bot.md` (후속편 톤)
+
+## 절차
+
+1. 위 선행 글 2개 + `.hermes/blog-style-guide.md` 스타일 맞추기
+2. `.hermes/blog-topics.json`의 settings.forbidden 절대 준수 — 회사명·보드 URL·내부 프로젝트키·실명 동료 금지. "이슈 트래커 / 문서 DB / 채팅 채널"로 일반화
+3. `_posts/YYYY-MM-DD-morning-briefing-cron-notion-jira.md` 작성 (date=실행 당일)
+4. 해당 토픽 status=published, published_at=당일 ISO 날짜
+5. settings.auto_push true면 commit·push origin master
+
+## 본문 필수 섹션
+
+- TL;DR (3~5줄)
+- 들어가며 — cron 글에서 “스케줄러”까지 다뤘고, 이번엔 **매일 아침 일정 브리핑**이라는 실전 루틴
+- 목표 출력 형태 — 예시 섹션만 (오늘 시작 / 진행 중 / 오늘 마감 / 기한 초과). 실제 티켓·회사 이름 넣지 말 것
+- 왜 agent가 아니라 script(no_agent)인가 — 일정 분류는 결정적, LLM 불필요, 토큰·불안정 회피. Discord deliver는 stdout
+- 최소 파이프라인 — env에서 API 키 로드 → REST 조회 → 날짜 기준 버킷 → 마크다운 문자열 → 비면 SILENT
+- Jira(또는 이슈 트래커) 쪽 예시 — JQL/assignee 필터, start·due 필드, statusCategory Done 제외 정도만. 코드는 **의사코드·가짜 필드명**
+- Notion(또는 문서 DB) 쪽 — 데이터베이스 query로 “오늘 할 일” 페이지 제목만 붙이는 선택지. 토큰·DB id는 플레이스홀더
+- Hermes cron 등록 예시 — `schedule: 30 7 * * 1-5`, `no_agent: true`, `script: ...`, `deliver: discord:...` (가짜 채널 id)
+- 운영 팁 — 게이트웨이 상시, 빈 아침은 침묵, 시크릿은 .env, cursor-acp는 cron에 비추(선행 ACP 글과 연결)
+- 마무리 — cron 개념 글 → Discord 운영 글 → 이 루틴으로 “매일 쓰는 자동화” 완성
+
+## 분량·형식
+
+- 1800~3200자
+- bash/python 코드 블록 1~2개 (의사코드 OK)
+- 표 1개 환영 (섹션 정의표)
+- 이미지 생성하지 않음
+- 이모지 과다 금지
+
+## 출력
+
+- 발행 제목, 파일 경로, https://kdkrkwhr.github.io 링크
+- 남은 pending 수
