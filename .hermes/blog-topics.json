@@ -149,6 +149,14 @@
       "outline": "Hermes cron 후속편. no_agent 스크립트로 Jira/Notion 일정 조회→섹션 분류→Discord deliver. 평일 크론, 빈 결과 SILENT, 시크릿은 env. 회사·보드 URL 일반화",
       "status": "published",
       "published_at": "2026-07-27"
+    },
+    {
+      "id": "github-pages-actions-static-app",
+      "title": "GitHub Pages + Actions로 정적 앱 배포하기",
+      "category": "Technology",
+      "outline": "Pages 최소 구성(.nojekyll), push=배포 vs schedule=데이터 갱신, Actions fetch→commit→push, UTC cron, SW 캐시 주의. Jenkins/Nginx 글 후속",
+      "status": "published",
+      "published_at": "2026-07-28"
     }
   ]
 }
