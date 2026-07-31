@@ -157,6 +157,22 @@
       "outline": "Pages 최소 구성(.nojekyll), push=배포 vs schedule=데이터 갱신, Actions fetch→commit→push, UTC cron, SW 캐시 주의. Jenkins/Nginx 글 후속",
       "status": "published",
       "published_at": "2026-07-28"
+    },
+    {
+      "id": "gpu-colab-ngrok-spring-rag-fewshot-test",
+      "title": "GPU 없는 PC에서 Spring RAG/Few-shot 도메인 API 테스트하기 (Colab + ngrok + 타임아웃)",
+      "category": "Technology",
+      "outline": "Colab LLM 서빙 + ngrok URL + Spring WebClient POST, ES+Qdrant 하이브리드 RAG, few-shot JSON 스키마",
+      "status": "published",
+      "published_at": "2026-07-29"
+    },
+    {
+      "id": "ngrok-proxy-tunnel",
+      "title": "ngrok이 하는 일 — 프록시란 무엇인가부터 터널 동작까지",
+      "category": "Technology",
+      "outline": "Forward/Reverse 프록시, localhost NAT 한계, ngrok cloud+agent outbound TLS 터널, 최소 사용법·주의점. Colab 연동 글 선행",
+      "status": "published",
+      "published_at": "2026-07-31"
     }
   ]
 }
