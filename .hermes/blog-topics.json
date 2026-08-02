@@ -185,14 +185,14 @@
       "id": "qlora-colab-t4-sft-seed",
       "title": "Colab T4에서 Q-LoRA 시드 SFT 돌리기",
       "category": "AI",
-      "outline": "증강 전 소량 시드로 먼저 학습→검증하는 절차. Qwen2.5-7B + Q-LoRA 4bit, mixed chat jsonl, adapter zip 저장, base+LoRA 스모크. Colab/ngrok 글 후속. 내부 도메인명 일반화",
+      "outline": "이전 Colab 글은 ‘서빙·호출’이었음 — 이번은 ‘학습’. 증강 전 시드 SFT→adapter zip→base+LoRA 스모크. Qwen2.5-7B Q-LoRA 4bit. 회사·제품명 금지",
       "status": "pending"
     },
     {
-      "id": "hybrid-rag-es-qdrant-rerank",
-      "title": "ES BM25 + Qdrant 하이브리드 RAG",
-      "category": "Technology",
-      "outline": "키워드(BM25) 후보 → 벡터 재랭크/병합, chunk_id 기준 중복 제거, citations를 id로 고정하는 이유. Colab RAG 글의 검색 쪽 심화. 특정 제품·회사명 금지",
+      "id": "few-shot-vs-sft-when",
+      "title": "Few-shot만으로 갈 때 vs SFT가 필요할 때",
+      "category": "AI",
+      "outline": "형식·스키마는 few-shot/프롬프트로 가능한 구간과, Top-1 선택·슬롯 정확도처럼 SFT가 필요한 구간을 가르는 기준. RAG=후보·LLM=선택 역할 분리. Colab RAG 글과 겹치지 않게 ‘학습 판단’만. 회사·제품명 금지",
       "status": "pending"
     },
     {
