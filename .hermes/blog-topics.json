@@ -193,7 +193,8 @@
       "title": "Few-shot만으로 갈 때 vs SFT가 필요할 때",
       "category": "AI",
       "outline": "형식·스키마는 few-shot/프롬프트로 가능한 구간과, Top-1 선택·슬롯 정확도처럼 SFT가 필요한 구간을 가르는 기준. RAG=후보·LLM=선택 역할 분리. Colab RAG 글과 겹치지 않게 ‘학습 판단’만. 회사·제품명 금지",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-08-03"
     },
     {
       "id": "lora-vs-qlora",
