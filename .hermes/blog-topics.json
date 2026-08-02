@@ -173,6 +173,41 @@
       "outline": "Forward/Reverse 프록시, localhost NAT 한계, ngrok cloud+agent outbound TLS 터널, 최소 사용법·주의점. Colab 연동 글 선행",
       "status": "published",
       "published_at": "2026-07-31"
+    },
+    {
+      "id": "kanban-multi-agent-decompose",
+      "title": "Kanban으로 멀티에이전트 업무 분해하기",
+      "category": "AI",
+      "outline": "보드 상태(todo/ready/running/blocked/review/done), 부모→자식 parents 의존성, 프로필별 assignee, orchestrator 분해 vs worker 실행. 회사·제품명 없이 일반화. Hermes/Orca 시리즈 후속",
+      "status": "pending"
+    },
+    {
+      "id": "qlora-colab-t4-sft-seed",
+      "title": "Colab T4에서 Q-LoRA 시드 SFT 돌리기",
+      "category": "AI",
+      "outline": "증강 전 소량 시드로 먼저 학습→검증하는 절차. Qwen2.5-7B + Q-LoRA 4bit, mixed chat jsonl, adapter zip 저장, base+LoRA 스모크. Colab/ngrok 글 후속. 내부 도메인명 일반화",
+      "status": "pending"
+    },
+    {
+      "id": "hybrid-rag-es-qdrant-rerank",
+      "title": "ES BM25 + Qdrant 하이브리드 RAG",
+      "category": "Technology",
+      "outline": "키워드(BM25) 후보 → 벡터 재랭크/병합, chunk_id 기준 중복 제거, citations를 id로 고정하는 이유. Colab RAG 글의 검색 쪽 심화. 특정 제품·회사명 금지",
+      "status": "pending"
+    },
+    {
+      "id": "lora-vs-qlora",
+      "title": "LoRA vs Q-LoRA — 같은 데이터여도 가중치가 다른 이유",
+      "category": "AI",
+      "outline": "LoRA는 base FP16/BF16 위 adapter, Q-LoRA는 양자화 base 위 adapter. 구조는 같아도 학습된 A/B는 다름. VRAM·품질 트레이드오프, 단일 adapter 서빙. Q-LoRA 시드 글 선행",
+      "status": "pending"
+    },
+    {
+      "id": "sft-then-dpo",
+      "title": "SFT 다음에 DPO가 필요한 이유",
+      "category": "AI",
+      "outline": "SFT=형식·스키마 맞추기, DPO=chosen/rejected로 선호 정렬. 고성능 출시에서 수정 피드백을 학습 신호로 쓰는 루프. 데이터 포맷·함정(레거시 코퍼스). Q-LoRA/LoRA 글 후속",
+      "status": "pending"
     }
   ]
 }
