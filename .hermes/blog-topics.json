@@ -210,6 +210,14 @@
       "category": "AI",
       "outline": "SFT=형식·스키마 맞추기, DPO=chosen/rejected로 선호 정렬. 고성능 출시에서 수정 피드백을 학습 신호로 쓰는 루프. 데이터 포맷·함정(레거시 코퍼스). Q-LoRA/LoRA 글 후속",
       "status": "pending"
+    },
+    {
+      "id": "llm-wiki-vs-rag",
+      "title": "LLM Wiki vs RAG — 언제 검색하고, 언제 위키로 컴파일할까",
+      "category": "AI",
+      "outline": "RAG=query-time 검색·합성, LLM Wiki(Karpathy)=ingest-time 마크다운 위키 컴파일. 기능·장단·선택 기준·하이브리드. Colab RAG 글과 겹치지 않게 ‘아키 선택’만. 회사·제품명 금지",
+      "status": "published",
+      "published_at": "2026-08-04"
     }
   ]
 }
