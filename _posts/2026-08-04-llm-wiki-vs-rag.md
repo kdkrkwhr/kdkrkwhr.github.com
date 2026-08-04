@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LLM Wiki vs RAG — 지식은 언제 합성할까"
-date: 2026-08-04 18:00:00 +0900
+date: 2026-08-04 12:00:00 +0900
 categories: AI
 tags: [LLM, RAG, LLM-Wiki, Knowledge, Architecture]
 description: "Karpathy식 LLM Wiki와 RAG의 기능·차이·합성 시점(ingest vs query)을 길게 정리한다. 언제 무엇을 쓰고, 어떻게 섞을지."
