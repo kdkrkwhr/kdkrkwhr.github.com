@@ -179,7 +179,8 @@
       "title": "Kanban으로 멀티에이전트 업무 분해하기",
       "category": "AI",
       "outline": "보드 상태(todo/ready/running/blocked/review/done), 부모→자식 parents 의존성, 프로필별 assignee, orchestrator 분해 vs worker 실행. 회사·제품명 없이 일반화. Hermes/Orca 시리즈 후속",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-08-04"
     },
     {
       "id": "qlora-colab-t4-sft-seed",
