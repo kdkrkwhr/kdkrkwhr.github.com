@@ -218,6 +218,14 @@
       "outline": "RAG=query-time 검색·합성, LLM Wiki(Karpathy)=ingest-time 마크다운 위키 컴파일. 기능·장단·선택 기준·하이브리드. Colab RAG 글과 겹치지 않게 ‘아키 선택’만. 회사·제품명 금지",
       "status": "published",
       "published_at": "2026-08-04"
+    },
+    {
+      "id": "agent-output-review-habit",
+      "title": "에이전트한테 시킨 일, 어떻게 검수할까 — grep·diff 기반 산출물 검증 습관",
+      "category": "AI",
+      "outline": "수락기준 선정의 → grep 존재증명 → diff 범위증명 → 정답지 출력대조",
+      "status": "published",
+      "published_at": "2026-08-07"
     }
   ]
 }

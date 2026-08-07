@@ -18,7 +18,7 @@ comments: true
 
 ### 들어가며
 
-지난번 글([AX 시대를 사는 개발자의 생각 정리](/ai/2026/07/23/ax-era-developer-thoughts/))에서 이런 말을 했다. "grep 한 줄로 스펙과 코드가 어긋났는지 바로 확인하는 습관 — 이게 없으면 에이전트의 산출물은 검증 안 된 부채일 뿐이다."
+지난번 글([AX 시대를 사는 개발자의 생각 정리](/ai/2026/07/23/ax-era-developer-thoughts.html))에서 이런 말을 했다. "grep 한 줄로 스펙과 코드가 어긋났는지 바로 확인하는 습관 — 이게 없으면 에이전트의 산출물은 검증 안 된 부채일 뿐이다."
 
 그 글을 쓰고 한 달 가까이 에이전트와 실제로 일해 보니, 그때보다 더 구체한 검수 루틴이 생겼다. 이번 글은 그 루틴을 정리한 메모다. "어떻게 시킬까"보다 "**어떻게 받을까**"에 무게를 둔다.
 
@@ -30,8 +30,8 @@ comments: true
 
 카드 하나를 줄 때 나는 이 세 가지를 반드시 적는다.
 
-* **입력/출력 형태** — "함수 시그니처는 `mapDrug(List<String>)`이고, 리턴은 `List<Concept>`"
-* **완료 조건** — "ATC 범위 표기 `R03BB04~07`이 concept_id 4개로 펼쳐지는 것까지"
+* **입력/출력 형태** — "함수 시그니처는 `mapSku(List<String>)`이고, 리턴은 `List<Product>`"
+* **완료 조건** — "SKU 범위 표기 `A-100~A-103`이 상품 4건으로 펼쳐지는 것까지"
 * **금지 사항** — "하드코딩 금지, 기존 API prefix 유지"
 
 이게 있으면 검수는 "잘했나?"가 아니라 "**조건 1·2·3이 충족됐나?**"가 된다. 주관이 빠지니 속도도 붙는다.
@@ -44,10 +44,10 @@ comments: true
 
 ```bash
 # 약속한 함수가 실제로 정의되어 있는가
-grep -rn "mapDrug" src/ || echo "MISSING"
+grep -rn "A-100" src/ || echo "MISSING"
 
 # 금지한 하드코딩이 안 들어갔는가
-grep -rn "21603296" src/ && echo "HARDCODE DETECTED"
+grep -rn "A-100" src/ && echo "HARDCODE DETECTED"
 
 # 바꿔야 할 prefix가 아직 남아있지 않은가
 grep -rn "/v1/old/" src/ && echo "STALE PREFIX"
@@ -78,9 +78,9 @@ git diff --stat
 도메인마다 기준이 되는 정답(ground truth)이 있으면, 에이전트 출력을 그걸로 채점한다. 코드를 읽는 게 아니라 **출력값을 대조**하는 게 더 빠르다.
 
 ```bash
-# 브리프를 넣고 나온 concept_id 목록을 정답지와 비교
-python score_codes.py --pred pred.json --gold gold.json
-# expected: J44 → 255573, R03BB04 → 21603296 ...
+# 입력값을 넣고 나온 상품 ID 목록을 정답지와 비교
+python score.py --pred pred.json --gold gold.json
+# expected: ORDER_PAID -> 3, SHIPPED -> 5
 ```
 
 이 방식의 장점은 "코드가 그럴듯한가"가 아니라 "**결과가 맞는가**"로 평가한다는 점이다. LLM 파이프라인처럼 중간 로직을 사람이 다 읽기 힘든 경우일수록 출력 대조가 유리하다.
