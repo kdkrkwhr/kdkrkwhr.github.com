@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" font-family="'Segoe UI','Malgun Gothic',sans-serif">
+  <defs>
+    <radialGradient id="gAI" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#e8f0fe"/><stop offset="100%" stop-color="#c5d9f7"/>
+    </radialGradient>
+    <radialGradient id="gAGI" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#e3f2ee"/><stop offset="100%" stop-color="#b8e0d4"/>
+    </radialGradient>
+    <radialGradient id="gAX" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#fdeef3"/><stop offset="100%" stop-color="#f6c9da"/>
+    </radialGradient>
+  </defs>
+
+  <!-- AI -->
+  <circle cx="410" cy="260" r="230" fill="url(#gAI)" stroke="#4285f4" stroke-width="2.5"/>
+  <text x="250" y="80" font-size="26" font-weight="700" fill="#1a56c4">AI</text>
+  <text x="250" y="104" font-size="14" fill="#3b5b9a">Artificial Intelligence · 인공지능 (전체)</text>
+
+  <!-- AGI -->
+  <circle cx="410" cy="260" r="150" fill="url(#gAGI)" stroke="#1aa179" stroke-width="2.5"/>
+  <text x="470" y="135" font-size="24" font-weight="700" fill="#0f7a5a">AGI</text>
+  <text x="470" y="157" font-size="13" fill="#15795b">Artificial General Intelligence · 범용</text>
+
+  <!-- AX -->
+  <circle cx="410" cy="260" r="85" fill="url(#gAX)" stroke="#e0608f" stroke-width="2.5"/>
+  <text x="395" y="205" font-size="20" font-weight="700" fill="#c4356f">AX</text>
+  <text x="360" y="224" font-size="11" fill="#b13a66">Agentic / Autonomous</text>
+
+  <!-- Agent core -->
+  <circle cx="410" cy="260" r="26" fill="#7b2ff7" stroke="#fff" stroke-width="2"/>
+  <text x="410" y="265" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Agent</text>
+
+  <!-- small agent nodes around AX -->
+  <g fill="#7b2ff7" opacity="0.85">
+    <circle cx="338" cy="232" r="9" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="478" cy="244" r="9" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="404" cy="320" r="9" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="352" cy="296" r="9" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="466" cy="300" r="9" stroke="#fff" stroke-width="1.5"/>
+  </g>
+  <line x1="410" y1="260" x2="338" y2="232" stroke="#7b2ff7" stroke-width="1" opacity="0.5"/>
+  <line x1="410" y1="260" x2="478" y2="244" stroke="#7b2ff7" stroke-width="1" opacity="0.5"/>
+  <line x1="410" y1="260" x2="404" y2="320" stroke="#7b2ff7" stroke-width="1" opacity="0.5"/>
+  <line x1="410" y1="260" x2="352" y2="296" stroke="#7b2ff7" stroke-width="1" opacity="0.5"/>
+  <line x1="410" y1="260" x2="466" y2="300" stroke="#7b2ff7" stroke-width="1" opacity="0.5"/>
+
+  <!-- legend -->
+  <g font-size="12" fill="#444">
+    <rect x="640" y="360" width="14" height="14" fill="url(#gAI)" stroke="#4285f4"/>
+    <text x="660" y="372">AI — 모든 지능형 소프트웨어</text>
+    <rect x="640" y="382" width="14" height="14" fill="url(#gAGI)" stroke="#1aa179"/>
+    <text x="660" y="394">AGI — 사람 수준 범용 지능</text>
+    <rect x="640" y="404" width="14" height="14" fill="url(#gAX)" stroke="#e0608f"/>
+    <text x="660" y="416">AX — 자율·에이전트형 시스템</text>
+    <rect x="640" y="426" width="14" height="14" fill="#7b2ff7"/>
+    <text x="660" y="438">Agent — AX를 구성하는 단위</text>
+  </g>
+  <text x="20" y="505" font-size="11" fill="#888">포함 관계: AI ⊃ AGI ⊃ AX ⊃ Agent. 바깥이 안을 모두 포함한다.</text>
+</svg>
