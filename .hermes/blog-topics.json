@@ -187,7 +187,8 @@
       "title": "Colab T4에서 Q-LoRA 시드 SFT 돌리기",
       "category": "AI",
       "outline": "이전 Colab 글은 ‘서빙·호출’이었음 — 이번은 ‘학습’. 증강 전 시드 SFT→adapter zip→base+LoRA 스모크. Qwen2.5-7B Q-LoRA 4bit. 회사·제품명 금지",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-08-10"
     },
     {
       "id": "few-shot-vs-sft-when",
