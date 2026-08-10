@@ -16,6 +16,7 @@ author:
 # Build
 markdown: kramdown
 highlighter: rouge
+future: true
 
 plugins:
   - jekyll-paginate
