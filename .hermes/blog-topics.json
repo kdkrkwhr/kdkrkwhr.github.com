@@ -203,7 +203,8 @@
       "title": "LoRA vs Q-LoRA — 같은 데이터여도 가중치가 다른 이유",
       "category": "AI",
       "outline": "LoRA는 base FP16/BF16 위 adapter, Q-LoRA는 양자화 base 위 adapter. 구조는 같아도 학습된 A/B는 다름. VRAM·품질 트레이드오프, 단일 adapter 서빙. Q-LoRA 시드 글 선행",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-08-12"
     },
     {
       "id": "sft-then-dpo",
