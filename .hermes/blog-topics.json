@@ -211,7 +211,8 @@
       "title": "SFT 다음에 DPO가 필요한 이유",
       "category": "AI",
       "outline": "SFT=형식·스키마 맞추기, DPO=chosen/rejected로 선호 정렬. 고성능 출시에서 수정 피드백을 학습 신호로 쓰는 루프. 데이터 포맷·함정(레거시 코퍼스). Q-LoRA/LoRA 글 후속",
-      "status": "pending"
+      "status": "published",
+      "published_at": "2026-08-29"
     },
     {
       "id": "llm-wiki-vs-rag",
