@@ -117,3 +117,7 @@ Coral이 내려가면 이미 만든 결과는 어떻게 될까? 이 경우에 �
 이번 작업으로 요청이 어디를 지나고, 어느 단계의 실패가 어디에 남는지 확인할 수 있게 됐다. 다음에는 자동화할 업무 하나를 정해서 이 흐름에 넣어 보려 한다. 어떤 이벤트를 입력으로 받을지, 결과에 무엇이 들어 있어야 쓸모가 있을지부터 정할 차례다.
 
 이 글은 [2026년 9월 28일의 구현 커밋](https://github.com/deepwhale-labs/event-driven-llm/commit/50015ece293f7fcfcd9ed5ed490cd9467fa7b2d7)을 기준으로 작성했다. 실행 옵션과 현재 구현 범위는 [프로젝트 README](https://github.com/deepwhale-labs/event-driven-llm#readme)에 정리해 두었다.
+
+----
+
+다음 글: [AI 자동화 프로젝트 2: 작업은 성공했는데 답은 틀렸다]({% post_url 2026-09-29-event-driven-llm-jev-shadow %})
