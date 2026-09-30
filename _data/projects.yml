@@ -1,10 +1,12 @@
-# GitHub Pages apps linked from the blog home / sidebar
-- id: attendance-pwa
-  title: 출퇴근 체크 PWA
-  tag: PWA
-  url: https://kdkrkwhr.github.io/attendance-pwa/
-  repo: https://github.com/kdkrkwhr/attendance-pwa
-  description: 서버 없이 돌아가는 자율출퇴근 관리. GitHub Pages에서 바로 씀.
+# Projects linked from the blog home / sidebar
+- id: event-driven-llm
+  title: event-driven-llm
+  tag: 개발 중
+  host: GitHub
+  cta: 프로젝트 보기 →
+  url: https://github.com/deepwhale-labs/event-driven-llm#readme
+  repo: https://github.com/deepwhale-labs/event-driven-llm
+  description: Kafka·Coral 기반 LLM 실행 콘솔. 작성·검토·수정과 결과 보존·재시도를 관리합니다.
 
 - id: hermes-agent-area
   title: Hermes Agent Area
