@@ -138,3 +138,7 @@ Jev는 모의 HTTP 응답으로 요청·응답 처리, 평가 의견 조합, 중
 이 글은 2026년 9월 29일의 로컬 구현과 검증 기록을 기준으로 작성했다. [프로젝트 저장소](https://github.com/deepwhale-labs/event-driven-llm)의 Jev 평가 추가분은 작성 시점에는 아직 push 전이다.
 
 이전 글: [Kafka에서 Coral까지 연결한 첫 번째 기록]({% post_url 2026-09-28-event-driven-llm-first-pipeline %})
+
+----
+
+다음 글: [AI 자동화 프로젝트 3: 검토를 붙이면 답이 좋아질까]({% post_url 2026-09-30-event-driven-llm-review-workflow %})
