@@ -8,9 +8,11 @@
   repo: https://github.com/deepwhale-labs/event-driven-llm
   description: Kafka·Coral 기반 LLM 실행 콘솔. 작성·검토·수정과 결과 보존·재시도를 관리합니다.
 
-- id: hermes-agent-area
-  title: Hermes Agent Area
-  tag: Live
-  url: https://kdkrkwhr.github.io/hermes-agent-area/
-  repo: https://github.com/kdkrkwhr/hermes-agent-area
-  description: Hermes 멀티 에이전트를 2D 가상 사무실에서 실시간 모니터링.
+- id: agent-hub
+  title: agent-hub
+  tag: 개발 중
+  host: GitHub
+  cta: 프로젝트 보기 →
+  url: https://github.com/kdkrkwhr/agent-hub#readme
+  repo: https://github.com/kdkrkwhr/agent-hub
+  description: Claude·Codex·Cursor가 함께 토론·투표하고 역할을 나눠 작업하는 로컬 에이전트 허브.
