@@ -118,6 +118,10 @@ Anna가 UI·호스팅·메모리·런타임을 제공한다는 설명과 함께,
 
 노트버디에서 만들고 싶은 경험은 단순하다. **오늘 잠깐 들러 밥을 주고 이야기를 나눴던 친구가, 내일도 그 기록을 가지고 기다리는 것.** 그림 한 장에서 시작한 친구가 어떤 모습으로 자라고 어떤 모험을 하게 될지, 그 과정을 계속 만들고 기록해 보려 한다.
 
-다음 편에서는 기존 게임 규칙을 Anna의 화면·저장소·AI 호출에 어떻게 연결했는지, 실제 앱으로 실행하고 배포하면서 무엇을 확인해야 했는지 정리할 예정이다.
+[2편]({{ '/ai/2026/10/19/notebuddy-anna-porting.html' | relative_url }})에서는 기존 게임 규칙을 Anna의 화면·저장소·AI 호출에 어떻게 연결했는지 정리했다. 이어지는 [3편]({{ '/ai/2026/10/19/notebuddy-character-growth.html' | relative_url }})에서는 그림 한 장이 성격 있는 친구로 성장하는 과정을 소개한다.
 
 [노트버디 소스와 사용 안내](https://github.com/kdkrkwhr/notebook-pets/tree/release) · [Anna 공식 개발자 안내](https://anna.partners/developers)
+
+----
+
+{% include notebuddy-series.html %}
