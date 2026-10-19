@@ -45,16 +45,14 @@ excerpt: "밥 주기 버튼 뒤에서는 무슨 일이 일어날까? 기존 Pyth
 | Python 실행 · `game_worker.py` | 요청을 공통 규칙에 전달하고 화면에 필요한 결과 구성 |
 | 공통 게임 규칙 · `engine/game_api.py` | 돌봄·성장·보상 조건을 검사하고 다음 상태 계산 |
 
-Anna의 실행 도구 체계를 **Executa**라고 부른다. 노트버디에서는 앱 화면이 Host API를 통해 이 Python 도구를 호출한다. 데이터가 오가는 큰 흐름만 그리면 다음과 같다.
+Anna의 실행 도구 체계를 **Executa**라고 부른다. 노트버디에서는 앱 화면이 Host API를 통해 이 Python 도구를 호출한다. 게임 행동이 규칙과 저장소에 연결되는 흐름은 다음과 같다.
 
 <div class="mermaid" role="img" aria-label="Anna 화면이 게임 도구를 호출하고, 도구가 공통 규칙으로 계산한 상태를 사용자별 저장소에 저장하는 구조">
 flowchart TD
-    UI["Anna 앱 화면"] -->|Host API · 게임 행동| Tool["Executa · Python 연결 계층"]
-    Tool -->|현재 상태와 행동| Core["공통 Python 게임 규칙"]
-    Core -->|계산한 다음 상태| Tool
-    Tool <-->|읽기와 조건부 저장| Save[("사용자별 게임 저장")]
-    UI -->|대화와 그림 요청| AI["Anna AI API"]
-    UI <-->|기록과 이미지 보관| Files[("앱 저장소와 파일")]
+    UI["Anna 앱 화면"] -->|게임 행동| Tool["Executa · Python 도구"]
+    Tool -->|계산 요청| Core["공통 게임 규칙"]
+    Core -->|다음 상태| Tool
+    Tool <-->|읽기·저장| Save[("사용자별 저장")]
 </div>
 
 이렇게 나누면 돌봄 규칙을 고칠 때 화면이나 Anna 저장 API까지 함께 고칠 필요가 줄어든다. 반대로 저장 방식이 달라져도 포만감이나 성장 조건을 플랫폼마다 다시 작성하지 않아도 된다.
