@@ -112,6 +112,8 @@ excerpt: "그림은 만들어졌는데 저장에 실패했다면 아이템은 �
 
 **모바일 버전도 개발 중이며, 출시를 준비하고 있습니다.** 현재는 `release-android`의 Android 0.2.2 alpha 단계입니다. 최신 버전의 실물 기기 확인과 정식 서명, 스토어 준비가 남아 있습니다. [Android 개발 기록](https://github.com/kdkrkwhr/notebook-pets/blob/ee0f420353c6709c74a1d77bf6eb02af6013376b/android/HANDOFF.md)을 이어가며, 다음에는 모바일에서 친구와 지내는 경험을 더 다듬어보려 합니다.
 
+{% include notebuddy-android-gallery.html %}
+
 ----
 
 {% include notebuddy-series.html %}

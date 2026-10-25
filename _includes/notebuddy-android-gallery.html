@@ -1,0 +1,47 @@
+<style>
+  .nb-android-gallery { margin: 2rem 0; padding: clamp(16px, 4vw, 30px); border: 1px solid var(--color-border); border-radius: 24px; background: linear-gradient(145deg, var(--color-surface-2), var(--color-surface)); }
+  .nb-android-gallery .nb-gallery-eyebrow { margin: 0 0 8px; color: var(--color-accent); font-size: .75rem; font-weight: 700; letter-spacing: .12em; }
+  .nb-android-gallery h4 { margin: 0 0 12px; font-size: 1.3rem; }
+  .nb-android-gallery .nb-gallery-note { margin: 0 0 24px; color: var(--color-text-muted); font-size: .9rem; line-height: 1.7; }
+  .nb-android-gallery .nb-gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; }
+  .nb-android-gallery figure { min-width: 0; margin: 0; }
+  .nb-android-gallery .nb-phone { display: block; width: 100%; max-width: 280px; margin: 0 auto; padding: 7px; border: 1px solid #4b5563; border-radius: 24px; background: #171b23; box-shadow: 0 12px 26px rgba(15, 23, 42, .18); }
+  .nb-android-gallery .nb-phone img { display: block; width: 100%; height: auto; margin: 0; border: 0; border-radius: 17px; box-shadow: none; }
+  .nb-android-gallery figcaption { margin: 14px auto 0; max-width: 280px; text-align: left; font-size: .85rem; line-height: 1.65; color: var(--color-text-muted); }
+  .nb-android-gallery figcaption strong { display: block; margin-bottom: 3px; color: var(--color-text); font-size: .95rem; }
+  .nb-android-gallery .nb-phone:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 5px; }
+  .nb-android-gallery .nb-gallery-source { margin: 24px 0 0; padding-top: 16px; border-top: 1px solid var(--color-border); color: var(--color-text-muted); font-size: .8rem; line-height: 1.7; }
+  @media (max-width: 540px) { .nb-android-gallery .nb-gallery-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
+</style>
+<section class="nb-android-gallery" aria-labelledby="nb-android-gallery-title">
+  <p class="nb-gallery-eyebrow">NOTEBUDDY · ANDROID</p>
+  <h4 id="nb-android-gallery-title">작은 화면에서도, 친구와 함께</h4>
+  <p class="nb-gallery-note">출시를 준비 중인 Android 0.2.2 alpha를 에뮬레이터에서 직접 실행해 봤습니다. 아래는 격리된 테스트 공책에 기본 캐릭터와 오프라인 샘플 데이터를 담아 촬영한 화면이에요. 이미지를 누르면 원본 크기로 볼 수 있습니다.</p>
+  <div class="nb-gallery-grid">
+    <figure>
+      <a class="nb-phone" href="{{ '/assets/images/notebuddy/android-0.2.2-alpha/android-friend.png' | relative_url }}" aria-label="친구 화면 원본 보기">
+        <img src="{{ '/assets/images/notebuddy/android-0.2.2-alpha/android-friend.png' | relative_url }}" width="1080" height="2400" loading="lazy" decoding="async" alt="Android 에뮬레이터의 노트버디 친구 화면. 기본 캐릭터 불씨와 포만감, 친밀도, 돌봄 버튼이 보입니다.">
+      </a>
+      <figcaption><strong>01 · 친구의 하루</strong>친구의 상태를 살피고, 밥을 주며 하루를 시작해요.</figcaption>
+    </figure>
+    <figure>
+      <a class="nb-phone" href="{{ '/assets/images/notebuddy/android-0.2.2-alpha/android-chat.png' | relative_url }}" aria-label="대화 화면 원본 보기">
+        <img src="{{ '/assets/images/notebuddy/android-0.2.2-alpha/android-chat.png' | relative_url }}" width="1080" height="2400" loading="lazy" decoding="async" alt="Android 에뮬레이터의 노트버디 대화 화면. 숲길 산책을 이야기하는 공개용 오프라인 예시 대화입니다.">
+      </a>
+      <figcaption><strong>02 · 나란히 이어가는 대화</strong>대화 흐름을 보여주기 위해 저장한 예시예요. 실제 사용자 대화나 이번 촬영에서 생성한 AI 답변은 아닙니다.</figcaption>
+    </figure>
+    <figure>
+      <a class="nb-phone" href="{{ '/assets/images/notebuddy/android-0.2.2-alpha/android-adventure.png' | relative_url }}" aria-label="모험 화면 원본 보기">
+        <img src="{{ '/assets/images/notebuddy/android-0.2.2-alpha/android-adventure.png' | relative_url }}" width="1080" height="2400" loading="lazy" decoding="async" alt="Android 에뮬레이터의 노트버디 모험 화면. 산책과 발견한 던전을 확인하는 테스트 공책입니다.">
+      </a>
+      <figcaption><strong>03 · 산책 너머의 작은 모험</strong>산책과 발견한 던전을 한곳에 모았어요. 진행 상태는 촬영용 샘플입니다.</figcaption>
+    </figure>
+    <figure>
+      <a class="nb-phone" href="{{ '/assets/images/notebuddy/android-0.2.2-alpha/android-home.png' | relative_url }}" aria-label="집 화면 원본 보기">
+        <img src="{{ '/assets/images/notebuddy/android-0.2.2-alpha/android-home.png' | relative_url }}" width="1080" height="2400" loading="lazy" decoding="async" alt="Android 에뮬레이터의 노트버디 집 화면. 기본 외형을 사용하는 친구와 픽셀 마당이 보입니다.">
+      </a>
+      <figcaption><strong>04 · 돌아올 집 한 채</strong>기본 외형으로도 친구의 집을 열어볼 수 있어요. 촬영 중 이미지 생성은 요청하지 않았습니다.</figcaption>
+    </figure>
+  </div>
+  <p class="nb-gallery-source">2026.10.25 촬영 · Android 개발 버전 0.2.2-alpha · Android API 36 에뮬레이터 · <a href="https://github.com/kdkrkwhr/notebook-pets/tree/ee0f420353c6709c74a1d77bf6eb02af6013376b">release-android ee0f420</a><br>실행 화면은 adb로 캡처한 원본 PNG입니다. 휴대폰 테두리와 배경은 블로그 CSS로만 표현했으며, 실기기 검증이나 스토어 출시를 뜻하지 않습니다.</p>
+</section>
