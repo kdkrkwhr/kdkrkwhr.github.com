@@ -2,8 +2,9 @@
 layout: post
 author: Kim, DongKi
 title: "Kafka 메시지는 한 번 왔는데, 처리는 왜 두 번 될까?"
-date: 2026-10-25
-permalink: /technology/2026/10/25/kafka-duplicate-processing-idempotency.html
+date: 2026-10-26 08:40:00 +0900
+canonical: true
+permalink: /technology/2026/10/26/kafka-duplicate-processing-idempotency.html
 categories: Technology
 comments: true
 description: "Kafka에 한 번 기록된 이벤트도 다시 처리될 수 있습니다. DB 반영과 offset 커밋 사이의 실패 구간, processed-event 패턴과 unique key, Kafka exactly-once의 범위를 작은 SQLite 실험으로 살펴봅니다."

@@ -16,7 +16,7 @@ comments: true
 ```
 
 - `categories`: AI 글은 `AI`, 인프라/DevOps 성격이면 `devOps`, 일반 기술이면 `Technology`
-- `date`: 실행 당일 날짜
+- `date`: 사용자 기준인 한국 시간 `Asia/Seoul`의 작성·게시 날짜. UTC 날짜를 그대로 쓰지 않고, 시각을 기재할 때는 `YYYY-MM-DD HH:MM:SS +0900`으로 명시합니다. 파일명과 permalink의 날짜도 같은 한국 날짜로 맞추며, 기존 글 날짜는 일괄 변경하지 않습니다.
 - 파일명: `_posts/YYYY-MM-DD-slug.md` (slug는 영문 소문자·하이픈)
 
 ## 본문 구조

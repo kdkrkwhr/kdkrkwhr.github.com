@@ -4,6 +4,7 @@ name: Tec-Blog
 tagline: Technology & DevOps
 description: 김동기의 개발·인프라·기술 이야기
 locale: ko
+timezone: Asia/Seoul
 url: https://kdkrkwhr.github.io
 baseurl: ""
 

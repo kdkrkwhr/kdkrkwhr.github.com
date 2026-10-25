@@ -6,6 +6,7 @@ Jekyll 정적 블로그. GitHub Pages 배포 (master 브랜치).
 
 - 토픽 큐: `.hermes/blog-topics.json`
 - 스타일: `.hermes/blog-style-guide.md`
+- 새 글의 날짜·파일명·permalink는 한국 시간 `Asia/Seoul` 기준으로 맞춘다. UTC 환경에서도 날짜를 변환하고 `date`에는 가능하면 `+0900` 시각을 명시한다. 기존 글은 일괄 변경하지 않는다.
 - cron 프롬프트: `.hermes/cron-prompt.txt`
 - 잡 이름: `blog-auto-post` (이틀에 1회, `every 2d`)
 
