@@ -40,11 +40,9 @@ excerpt: "사람도 구조와 코드를 따라 읽을 수 있어야 합니다. �
 
 두 저장소가 답하는 질문이 다릅니다.
 
-| 질문 | 어디에 기록하나 | 읽을 때 확인할 것 |
-| --- | --- | --- |
-| 다음 프로젝트에서 이름, API 계약, 오류, 테스트를 어떻게 정할까? | `engineering-standards` | 어떤 규칙과 언어·프레임워크 프로필을 **선택했는지** |
-| 이 공개 프로젝트는 실제로 어떻게 동작하나? | `kdk-knowledge` | 어느 파일을 어느 **커밋에서 읽었는지** |
-| 왜 이 프로젝트가 그 선택을 했나? | 근거가 있을 때 프로젝트의 결정 기록과 위키에 연결 | 코드에 보이는 사실과 선택 이유를 혼동하지 않았는지 |
+* **다음 프로젝트에서 어떻게 만들까?** `engineering-standards`에서 이름, API 계약, 오류, 테스트의 기준을 찾습니다. 소비 프로젝트에는 선택한 언어·프레임워크 프로필을 따로 기록합니다.
+* **이 공개 프로젝트는 실제로 어떻게 동작하나?** `kdk-knowledge`에서 코드와 설정을 읽고, 어느 파일을 어느 커밋에서 확인했는지 연결합니다.
+* **왜 그런 선택을 했나?** 코드에 보이는 구현만으로는 이유를 알 수 없습니다. 공개 가능한 결정 기록이 있을 때 사실과 구분해 연결합니다.
 
 기준을 모아두면 프로젝트마다 같은 출발점을 재사용할 수 있습니다. 하지만 기준 저장소가 존재한다는 이유만으로 기존 프로젝트에 규칙이 적용되지는 않습니다. 반대로 위키의 설명을 앞으로 만들 모든 코드의 강제 규칙처럼 읽어도 곤란합니다. **선택할 규칙과 관찰한 사실을 분리**해야 둘 다 정확하게 갱신할 수 있습니다.
 
@@ -57,7 +55,7 @@ excerpt: "사람도 구조와 코드를 따라 읽을 수 있어야 합니다. �
 
 [![공통 개발 기준을 읽고 언어와 프레임워크 프로필을 선택해 소비 프로젝트의 AGENTS.md와 적용 프로필에 기록한 뒤 구현과 검증 결과로 이어지는 세로 흐름도]({{ '/assets/images/project-structure/standards-flow.svg' | relative_url }})]({{ '/assets/images/project-structure/standards-flow.svg' | relative_url }})
 
-*그림 1. 공개 저장소의 적용 안내를 바탕으로 그린 **개념 흐름도**입니다. 특정 소비 프로젝트가 이미 이 순서로 적용됐다는 뜻은 아닙니다.*
+*그림 1. 공개 저장소의 적용 안내를 바탕으로 그린 **개념 흐름도**입니다. 특정 소비 프로젝트가 이미 이 순서로 적용됐다는 뜻은 아닙니다. 그림을 누르면 원본 크기로 볼 수 있습니다.*
 
 [README의 문서 지도](https://github.com/kdkrkwhr/engineering-standards/blob/0ab26dea2102fbb801740ba9f853a004761b7e0c/README.md)를 실제 경로로 줄이면 다음과 같습니다.
 
@@ -95,15 +93,13 @@ API를 다룰 때는 [API·DTO 계약](https://github.com/kdkrkwhr/engineering-s
 
 [Spring Boot 프로필](https://github.com/kdkrkwhr/engineering-standards/blob/0ab26dea2102fbb801740ba9f853a004761b7e0c/profiles/frameworks/spring-boot.md)의 `presentation / application / domain / infrastructure`는 **새 Spring 프로젝트의 기본 선택안**입니다. 아래 `CatalogEntry`는 프로필의 설명용 도메인을 따른 **개념 예시**입니다. 어떤 공개 프로젝트의 실제 엔드포인트나 성과를 설명하는 예가 아닙니다.
 
-`POST /catalog-entries`로 항목을 하나 만든다고 가정해보겠습니다. 사람이 코드를 읽을 때의 순서는 이렇습니다.
+`POST /catalog-entries`로 항목을 하나 만든다고 가정해보겠습니다. 사람이 코드를 읽는 순서로 책임을 따라가면 이렇습니다.
 
-| 읽는 지점 | 책임 | 확인할 질문 |
-| --- | --- | --- |
-| `presentation`의 Controller·Request DTO | HTTP 입력을 검증하고 작업을 호출합니다. 응답 DTO와 상태·오류도 이 경계에서 정리합니다. | `title`이 없거나 비었을 때 어떤 계약으로 응답하나? |
-| `application`의 `CreateCatalogEntryService` | 생성 순서와 트랜잭션 경계를 조정합니다. 저장 경계가 필요하면 `EntryStore` 같은 계약을 둡니다. | 한 작업에서 무엇이 함께 성공해야 하나? |
-| `domain`의 `CatalogEntry` | 항목의 상태와 불변식을 표현합니다. | 외부 요청 형식과 무관하게 지켜야 하는 규칙은 무엇인가? |
-| `infrastructure`의 `JpaEntryStore` | `EntryStore` 계약을 실제 DB 접근으로 연결합니다. | 어떤 저장 기술을 쓰며, 실패는 어디서 번역하나? |
-| 테스트 | 도메인 규칙, 사용 사례, HTTP·저장 경계를 필요한 만큼 검증합니다. | 모형 테스트와 실제 DB 통합 검증을 구분했나? |
+1. **`presentation` — 입력과 응답.** Controller와 Request DTO에서 HTTP 입력을 검증하고 작업을 호출합니다. `title`이 없거나 비었을 때의 응답, 성공 상태와 Response DTO도 이 경계의 계약입니다.
+2. **`application` — 작업 순서.** `CreateCatalogEntryService`가 생성 작업과 트랜잭션 경계를 조정합니다. 저장 경계를 분리할 필요가 있으면 `EntryStore` 같은 계약을 둡니다. 여기서는 무엇이 함께 성공해야 하는지 확인합니다.
+3. **`domain` — 변하지 않아야 할 규칙.** `CatalogEntry`가 항목 상태와 불변식을 표현합니다. HTTP 필드 표기와 무관하게 지켜야 할 규칙이 무엇인지 읽습니다.
+4. **`infrastructure` — 실제 연동.** `JpaEntryStore`가 저장 계약을 DB 접근으로 연결합니다. 사용한 저장 기술과 실패를 다루는 지점을 확인합니다.
+5. **테스트 — 확인한 범위.** 도메인 규칙, 사용 사례, HTTP·저장 경계를 필요한 만큼 검증합니다. 모형 테스트와 실제 DB 통합 검증 결과를 구분합니다.
 
 호출 흐름으로 보면 Controller가 작업을 부르고 작업이 도메인 규칙과 저장 계약을 사용합니다. **의존 방향**은 단순히 네 폴더를 일렬로 잇는 것과 다릅니다. 프로필의 기본 방향은 `presentation → application → domain`이고, DB 구현인 `infrastructure`는 필요할 때 `application`의 저장 계약에 연결됩니다. 요청을 읽을 때는 입력 DTO에서 시작하고, 응답을 확인할 때는 다시 presentation의 응답 계약으로 돌아옵니다.
 
@@ -116,7 +112,7 @@ API를 다룰 때는 [API·DTO 계약](https://github.com/kdkrkwhr/engineering-s
 
 [![공개 저장소의 README 코드 설정 테스트를 읽고 전체 커밋 SHA의 근거를 sources.json에 등록한 다음 Markdown 해설을 작성해 위키 문서 검색 색인과 관계 지도 데이터를 생성하는 세로 흐름도]({{ '/assets/images/project-structure/knowledge-flow.svg' | relative_url }})]({{ '/assets/images/project-structure/knowledge-flow.svg' | relative_url }})
 
-*그림 2. `kdk-knowledge`의 현재 파일과 생성 경로를 그린 **구조도**입니다. 관계는 사람이 등록한 편집 관계이며 자동 분석 결과가 아닙니다.*
+*그림 2. `kdk-knowledge`의 현재 파일과 생성 경로를 그린 **구조도**입니다. 관계는 사람이 등록한 편집 관계이며 자동 분석 결과가 아닙니다. 그림을 누르면 원본 크기로 볼 수 있습니다.*
 
 `kdk-knowledge`의 편집 원본은 `docs/wiki/*.md`입니다. `docs/wiki/sources.json`에는 공개 파일 URL과 전체 커밋 SHA를 등록합니다. [문서 갱신 절차](https://github.com/kdkrkwhr/kdk-knowledge/blob/288c50ffe4f8928a1b7f8ef7ec1f4536a8af4eec/docs/wiki/maintenance.md)는 README만 보고 설명을 끝내지 말고 구현 코드, 설정, 의존성, 테스트 파일도 읽으라고 합니다. 원본 저장소에 위키가 없어도 이 중앙 위키에 문서를 만들 수 있고, 원본 프로젝트는 수정하지 않습니다.
 
@@ -138,11 +134,9 @@ kdk-knowledge/
 
 예를 들어 이 위키 자체를 설명한다면 다음처럼 경계를 나눌 수 있습니다.
 
-| 구분 | 기록할 내용 | 확인 방법 |
-| --- | --- | --- |
-| 소스에서 확인한 사실 | `build_wiki.py`가 Markdown에서 `search-index.json`과 `knowledge.json`을 생성합니다. | 해당 코드와 고정 커밋을 연결합니다. |
-| 그 사실에서 읽은 구조 | 한 편집 원본이 문서·검색·관계 화면에 쓰입니다. | 코드에서 확인한 출력 경로를 바탕으로 한 **해석**이라고 밝힙니다. |
-| 아직 확인하지 못한 것 | 각 프로젝트의 선택 이유, 개인 담당 범위, 운영 결과. | 별도 공개 근거가 생길 때까지 단정하지 않습니다. |
+* **소스에서 확인한 사실:** `build_wiki.py`가 Markdown에서 `search-index.json`과 `knowledge.json`을 생성합니다. 해당 코드와 고정 커밋을 연결합니다.
+* **그 사실에서 읽은 구조:** 한 편집 원본이 문서·검색·관계 화면에 쓰입니다. 코드의 출력 경로를 근거로 한 **해석**이라고 밝힙니다.
+* **아직 확인하지 못한 것:** 각 프로젝트의 선택 이유, 개인 담당 범위, 운영 결과는 별도 공개 근거가 생길 때까지 단정하지 않습니다.
 
 원본에 테스트 파일이 있다는 사실과 그 테스트가 실제로 성공했다는 사실도 다릅니다. 위키는 출처를 가까이 두고 이 차이를 설명해야 합니다. 현재 관계 지도 역시 문서에 사람이 등록한 **편집 관계**입니다. `engineering-standards`의 Graphify는 그 저장소의 사이트 생성기 코드 관계를 읽는 별도 분석이고, 이 지식 허브에서 Graphify나 외부 LLM 분석을 자동 실행한 결과가 아닙니다.
 
