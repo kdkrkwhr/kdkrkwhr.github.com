@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="940" viewBox="0 0 640 940" role="img" aria-labelledby="title desc">
+  <title id="title">개발 기준을 소비 프로젝트에 적용하는 흐름</title>
+  <desc id="desc">공통 기준을 읽고 언어와 프레임워크 프로필을 선택한 뒤, 소비 프로젝트의 AGENTS.md와 적용 프로필에 기록하고 구현과 검증 결과를 남기는 개념도.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#72d6c3"/>
+    </marker>
+  </defs>
+  <rect width="640" height="940" rx="24" fill="#0b1423"/>
+  <text x="42" y="58" fill="#84e2cb" font-size="17" font-weight="700" letter-spacing="2" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">ENGINEERING STANDARDS</text>
+  <text x="42" y="105" fill="#f4f8fc" font-size="29" font-weight="800" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">기준을 프로젝트로 가져가는 길</text>
+  <text x="42" y="136" fill="#bdcbd8" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">고정 커밋의 문서를 복사하고 적용 범위를 선택합니다</text>
+
+  <rect x="38" y="166" width="564" height="145" rx="16" fill="#17283a" stroke="#3d7790" stroke-width="2"/>
+  <text x="64" y="199" fill="#84e2cb" font-size="18" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">01  공통 기준</text>
+  <text x="64" y="236" fill="#f4f8fc" font-size="24" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">요구·이름·오류·검증의 기본값</text>
+  <text x="64" y="272" fill="#bdcbd8" font-size="19" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">standards/core.md · naming.md</text>
+  <path d="M320 317 V341" stroke="#72d6c3" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="38" y="354" width="564" height="150" rx="16" fill="#17283a" stroke="#3d7790" stroke-width="2"/>
+  <text x="64" y="387" fill="#84e2cb" font-size="18" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">02  사용하는 스택만 선택</text>
+  <text x="64" y="423" fill="#f4f8fc" font-size="23" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">언어 프로필 + 프레임워크 프로필</text>
+  <text x="64" y="456" fill="#bdcbd8" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">Java · Python · Dart · C# · TypeScript 중 선택</text>
+  <text x="64" y="484" fill="#bdcbd8" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">Spring 네 계층은 Spring Boot를 쓸 때만</text>
+  <path d="M320 510 V534" stroke="#72d6c3" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="38" y="547" width="564" height="150" rx="16" fill="#17283a" stroke="#3d7790" stroke-width="2"/>
+  <text x="64" y="580" fill="#84e2cb" font-size="18" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">03  소비 프로젝트에서 선택 기록</text>
+  <text x="64" y="618" fill="#f4f8fc" font-size="23" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">AGENTS.md · engineering-profile.md</text>
+  <text x="64" y="653" fill="#bdcbd8" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">선택한 규칙, 예외, 진입점, 실제 테스트 명령</text>
+  <text x="64" y="680" fill="#bdcbd8" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">기준 문서 사본은 고정 커밋으로 보관</text>
+  <path d="M320 703 V727" stroke="#72d6c3" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="38" y="740" width="564" height="130" rx="16" fill="#193346" stroke="#72d6c3" stroke-width="2"/>
+  <text x="64" y="773" fill="#84e2cb" font-size="18" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">04  구현과 검증</text>
+  <text x="64" y="811" fill="#f4f8fc" font-size="24" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">요구 → 코드맵 → 테스트 결과</text>
+  <text x="64" y="846" fill="#bdcbd8" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">통과·실패·미실행을 구분해 사람에게 전달</text>
+  <text x="320" y="911" text-anchor="middle" fill="#a9bacb" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">기존 프로젝트 계약과 관례를 먼저 확인합니다</text>
+</svg>

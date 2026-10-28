@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="990" viewBox="0 0 640 990" role="img" aria-labelledby="title desc">
+  <title id="title">공개 소스에서 중앙 지식 위키까지의 흐름</title>
+  <desc id="desc">공개 저장소의 코드와 설정을 읽고 고정 커밋의 출처를 등록한 뒤 사람이 Markdown 해설과 관계를 작성한다. 생성기가 문서, 검색 색인, 관계 지도 데이터를 만드는 현재 구조.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#f3c991"/>
+    </marker>
+  </defs>
+  <rect width="640" height="990" rx="24" fill="#0c1424"/>
+  <text x="42" y="58" fill="#f3c991" font-size="17" font-weight="700" letter-spacing="2" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">KDK KNOWLEDGE</text>
+  <text x="42" y="105" fill="#f4f8fc" font-size="29" font-weight="800" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">공개 코드에서 근거 위키까지</text>
+  <text x="42" y="136" fill="#bdcbd8" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">원본 프로젝트에는 별도 위키가 없어도 됩니다</text>
+
+  <rect x="38" y="166" width="564" height="140" rx="16" fill="#1d293c" stroke="#86694c" stroke-width="2"/>
+  <text x="64" y="199" fill="#f3c991" font-size="18" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">01  공개 원본을 읽기</text>
+  <text x="64" y="236" fill="#f4f8fc" font-size="24" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">README · 코드 · 설정 · 테스트</text>
+  <text x="64" y="272" fill="#bdcbd8" font-size="19" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">읽은 범위와 확인하지 못한 부분을 구분</text>
+  <path d="M320 312 V336" stroke="#f3c991" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="38" y="349" width="564" height="140" rx="16" fill="#1d293c" stroke="#86694c" stroke-width="2"/>
+  <text x="64" y="382" fill="#f3c991" font-size="18" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">02  출처 고정</text>
+  <text x="64" y="419" fill="#f4f8fc" font-size="23" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">docs/wiki/sources.json</text>
+  <text x="64" y="455" fill="#bdcbd8" font-size="19" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">공개 파일 URL + 전체 커밋 SHA</text>
+  <path d="M320 495 V519" stroke="#f3c991" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="38" y="532" width="564" height="148" rx="16" fill="#1d293c" stroke="#86694c" stroke-width="2"/>
+  <text x="64" y="565" fill="#f3c991" font-size="18" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">03  사람이 해설과 관계 편집</text>
+  <text x="64" y="602" fill="#f4f8fc" font-size="23" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">docs/wiki/*.md</text>
+  <text x="64" y="638" fill="#bdcbd8" font-size="19" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">확인한 사실 · 해석 · 미확인을 나눠 기록</text>
+  <path d="M320 686 V710" stroke="#f3c991" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="38" y="723" width="564" height="173" rx="16" fill="#3a302e" stroke="#f3c991" stroke-width="2"/>
+  <text x="64" y="756" fill="#f3c991" font-size="18" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">04  생성 후 Pages에 배포</text>
+  <text x="64" y="792" fill="#f4f8fc" font-size="23" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">scripts/build_wiki.py → site/</text>
+  <text x="64" y="824" fill="#e6e2df" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">wiki/ 문서 · search-index.json 검색</text>
+  <text x="64" y="851" fill="#e6e2df" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">knowledge.json → architecture/ 관계 지도</text>
+  <text x="64" y="878" fill="#e6e2df" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">검증: build --check · validate · 단위 테스트</text>
+  <text x="320" y="939" text-anchor="middle" fill="#a9bacb" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">현재 지도는 편집 관계 · Graphify 분석은 미실행</text>
+  <text x="320" y="966" text-anchor="middle" fill="#a9bacb" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">원본 변경은 해설을 자동으로 고치지 않습니다</text>
+</svg>
