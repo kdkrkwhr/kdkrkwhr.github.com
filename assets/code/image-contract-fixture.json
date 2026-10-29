@@ -1,0 +1,12 @@
+{
+  "image": {
+    "id": "img-7",
+    "url": "https://example.test/images/7.jpg",
+    "dimensions": {"width": 640, "height": 480},
+    "variants": [
+      {"kind": "thumbnail", "url": "https://example.test/images/7-small.jpg"}
+    ],
+    "attribution": null,
+    "sourceHint": "public-catalog"
+  }
+}

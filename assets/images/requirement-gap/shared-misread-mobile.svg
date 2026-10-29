@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="765" viewBox="0 0 360 765" role="img" aria-labelledby="title desc">
+  <title id="title">같은 오해가 구현과 테스트에 전달되는 모바일 흐름도</title>
+  <desc id="desc">image 객체 전체 요구를 id와 url만 저장하라는 해석으로 줄이면, 구현과 테스트가 모두 같은 필드만 보아 검사 통과 뒤에도 나머지 필드가 빠진다.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#a9bad0"/></marker></defs>
+  <rect width="360" height="765" rx="18" fill="#0b1422"/>
+  <text x="22" y="37" fill="#ffb7a9" font-size="15" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">같은 오해가 두 번 복제될 때</text>
+  <text x="22" y="72" fill="#f2f7fc" font-size="25" font-weight="800" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">초록 테스트의 빈틈</text>
+  <text x="22" y="97" fill="#b5c5d6" font-size="14" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">설명을 위한 재구성 예시입니다</text>
+
+  <rect x="20" y="121" width="320" height="93" rx="13" fill="#1a2d41" stroke="#79bad5" stroke-width="2"/>
+  <text x="38" y="151" fill="#79d6e8" font-size="16" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">원문 계약 R1</text>
+  <text x="38" y="179" fill="#f2f7fc" font-size="17" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">image 객체를 정의한 범위대로</text>
+  <text x="38" y="201" fill="#f2f7fc" font-size="17" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">저장</text>
+  <path d="M180 219 V242" stroke="#a9bad0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="20" y="254" width="320" height="87" rx="13" fill="#422a35" stroke="#f29b8d" stroke-width="2"/>
+  <text x="38" y="284" fill="#ffb7a9" font-size="16" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">잘못된 공통 해석</text>
+  <text x="38" y="317" fill="#fff4f1" font-size="19" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">“id와 url만 필요해”</text>
+
+  <path d="M180 348 V366 H32 V533" fill="none" stroke="#a9bad0" stroke-width="2.5"/>
+  <path d="M32 386 H44" stroke="#a9bad0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M32 499 H44" stroke="#a9bad0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="55" y="361" width="285" height="96" rx="13" fill="#1d2a3d" stroke="#7189a7" stroke-width="2"/>
+  <text x="72" y="390" fill="#d4e2f2" font-size="17" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">구현</text>
+  <text x="72" y="417" fill="#f2f7fc" font-size="16" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">DTO에 id, url만 저장</text>
+  <text x="72" y="441" fill="#b5c5d6" font-size="14" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">중첩·배열·null 누락</text>
+  <rect x="55" y="474" width="285" height="96" rx="13" fill="#1d2a3d" stroke="#7189a7" stroke-width="2"/>
+  <text x="72" y="503" fill="#d4e2f2" font-size="17" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">테스트</text>
+  <text x="72" y="530" fill="#f2f7fc" font-size="16" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">id, url만 확인</text>
+  <text x="72" y="554" fill="#b5c5d6" font-size="14" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">누락 필드는 기대값에도 없음</text>
+  <path d="M180 576 V596" stroke="#a9bad0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="20" y="608" width="320" height="96" rx="13" fill="#2b382e" stroke="#a8d69c" stroke-width="2"/>
+  <text x="38" y="639" fill="#c4f0b8" font-size="18" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">검사는 통과할 수 있어요</text>
+  <text x="38" y="666" fill="#f2f7fc" font-size="15" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">하지만 R1의 나머지 내용은</text>
+  <text x="38" y="687" fill="#f2f7fc" font-size="15" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">검증하지 않았습니다</text>
+  <text x="180" y="741" text-anchor="middle" fill="#aabdd0" font-size="14" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">테스트 통과 범위 ≠ 요구 충족 범위</text>
+</svg>

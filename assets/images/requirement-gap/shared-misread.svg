@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="728" viewBox="0 0 640 728" role="img" aria-labelledby="title desc">
+  <title id="title">같은 요구 해석이 구현과 테스트를 함께 왜곡하는 흐름</title>
+  <desc id="desc">원문은 image 객체 전체 저장을 요구하지만 id와 url만 저장하는 것으로 잘못 해석한다. 구현과 테스트가 모두 그 두 필드에 맞춰지면 테스트가 통과해도 나머지 필드는 빠진다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10 Z" fill="#a9bad0"/></marker>
+  </defs>
+  <rect width="640" height="728" rx="22" fill="#0b1422"/>
+  <text x="38" y="53" fill="#ffb7a9" font-size="17" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">같은 오해가 두 번 복제될 때</text>
+  <text x="38" y="96" fill="#f2f7fc" font-size="28" font-weight="800" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">초록 테스트의 빈틈</text>
+  <text x="38" y="126" fill="#b5c5d6" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">아래 필드와 데이터는 설명을 위한 재구성 예시</text>
+
+  <rect x="38" y="159" width="564" height="84" rx="14" fill="#1a2d41" stroke="#79bad5" stroke-width="2"/>
+  <text x="60" y="190" fill="#79d6e8" font-size="18" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">원문 계약 R1</text>
+  <text x="60" y="221" fill="#f2f7fc" font-size="21" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">image 객체를 정의한 범위대로 저장</text>
+  <path d="M320 249 V274" stroke="#a9bad0" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="38" y="286" width="564" height="86" rx="14" fill="#422a35" stroke="#f29b8d" stroke-width="2"/>
+  <text x="60" y="317" fill="#ffb7a9" font-size="18" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">잘못된 공통 해석</text>
+  <text x="60" y="348" fill="#fff4f1" font-size="21" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">“필요한 건 id와 url뿐”</text>
+
+  <path d="M320 378 V394 H176 V409" fill="none" stroke="#a9bad0" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M320 394 H464 V409" fill="none" stroke="#a9bad0" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="38" y="423" width="270" height="122" rx="14" fill="#1d2a3d" stroke="#7189a7" stroke-width="2"/>
+  <text x="60" y="454" fill="#d4e2f2" font-size="19" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">구현</text>
+  <text x="60" y="487" fill="#f2f7fc" font-size="19" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">DTO에 id, url만</text>
+  <text x="60" y="517" fill="#b5c5d6" font-size="17" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">중첩·배열·null 누락</text>
+  <rect x="332" y="423" width="270" height="122" rx="14" fill="#1d2a3d" stroke="#7189a7" stroke-width="2"/>
+  <text x="354" y="454" fill="#d4e2f2" font-size="19" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">테스트</text>
+  <text x="354" y="487" fill="#f2f7fc" font-size="19" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">id, url만 확인</text>
+  <text x="354" y="517" fill="#b5c5d6" font-size="17" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">누락 필드는 기대값에도 없음</text>
+
+  <path d="M176 550 V572 H320" fill="none" stroke="#a9bad0" stroke-width="3"/>
+  <path d="M464 550 V572 H320 V585" fill="none" stroke="#a9bad0" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="38" y="598" width="564" height="83" rx="14" fill="#2b382e" stroke="#a8d69c" stroke-width="2"/>
+  <text x="60" y="631" fill="#c4f0b8" font-size="20" font-weight="700" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">검사는 통과할 수 있습니다</text>
+  <text x="60" y="659" fill="#f2f7fc" font-size="18" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">하지만 R1의 나머지 내용은 검증하지 않았습니다</text>
+  <text x="320" y="713" text-anchor="middle" fill="#aabdd0" font-size="17" font-family="Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif">테스트 통과 범위와 요구 충족 범위는 다릅니다</text>
+</svg>
