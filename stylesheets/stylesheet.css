@@ -582,6 +582,16 @@ a:hover { color: var(--color-accent-hover); }
   font-size: 0.9375rem;
 }
 
+.post-content .table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post-content .table-scroll table {
+  min-width: 620px;
+}
+
 .post-content th,
 .post-content td {
   padding: 0.625rem 0.75rem;

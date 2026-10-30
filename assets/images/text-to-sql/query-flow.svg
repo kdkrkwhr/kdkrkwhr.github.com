@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">자연어 요청에서 검증된 매출 조회까지</title>
+  <desc id="desc">사용자 요청을 LLM이 제한된 조회 의도로 추출하고 서버가 인증된 테넌트, 지표, 기간을 검증한 뒤 고정 SQL에 값을 바인딩해 DB를 조회한다. 모호한 요청은 재질문하고 불허 요청은 거절한다.</desc>
+  <rect width="1200" height="480" rx="26" fill="#0c1829"/>
+  <text x="48" y="53" fill="#f4f8ff" font-size="25" font-family="Arial, sans-serif" font-weight="700">Text-to-SQL의 실행 경계</text>
+  <text x="48" y="83" fill="#a7b8ce" font-size="16" font-family="Arial, sans-serif">모델의 출력은 조회 요청이며, 실행 권한은 서버가 결정합니다.</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <rect x="48" y="132" width="200" height="160" rx="16" fill="#173755" stroke="#4ea4df" stroke-width="2"/>
+    <text x="148" y="175" fill="#e8f6ff" font-size="21" font-weight="700">사용자 질문</text>
+    <text x="148" y="210" fill="#c5d5e7" font-size="16">“10월 1~2일</text><text x="148" y="235" fill="#c5d5e7" font-size="16">결제 매출은?”</text>
+    <rect x="288" y="132" width="200" height="160" rx="16" fill="#224062" stroke="#74b8eb" stroke-width="2"/>
+    <text x="388" y="175" fill="#e8f6ff" font-size="21" font-weight="700">LLM 추출</text>
+    <text x="388" y="210" fill="#c5d5e7" font-size="16">지표 · 시작일 · 종료일</text>
+    <text x="388" y="235" fill="#c5d5e7" font-size="16">SQL·테넌트 제외</text>
+    <rect x="528" y="132" width="200" height="160" rx="16" fill="#224b43" stroke="#69ccb0" stroke-width="2"/>
+    <text x="628" y="175" fill="#effff9" font-size="21" font-weight="700">서버 검증</text>
+    <text x="628" y="210" fill="#cce9df" font-size="16">인증 테넌트 · 권한</text>
+    <text x="628" y="235" fill="#cce9df" font-size="16">지표 · 기간 · 범위</text>
+    <rect x="768" y="132" width="200" height="160" rx="16" fill="#224b43" stroke="#69ccb0" stroke-width="2"/>
+    <text x="868" y="175" fill="#effff9" font-size="21" font-weight="700">고정 쿼리</text>
+    <text x="868" y="210" fill="#cce9df" font-size="16">허용 식별자 선택</text>
+    <text x="868" y="235" fill="#cce9df" font-size="16">값은 ? 에 바인딩</text>
+    <rect x="1008" y="132" width="144" height="160" rx="16" fill="#4e3b2b" stroke="#e5ad69" stroke-width="2"/>
+    <text x="1080" y="175" fill="#fff4e7" font-size="21" font-weight="700">DB 조회</text>
+    <text x="1080" y="210" fill="#f4ddbe" font-size="16">읽기 권한</text>
+    <text x="1080" y="235" fill="#f4ddbe" font-size="16">시간 제한</text>
+    <path d="M248 212h40 M488 212h40 M728 212h40 M968 212h40" stroke="#d9e6f2" stroke-width="3" fill="none"/>
+    <path d="M282 205l7 7-7 7 M522 205l7 7-7 7 M762 205l7 7-7 7 M1002 205l7 7-7 7" stroke="#d9e6f2" stroke-width="3" fill="none"/>
+    <path d="M628 292v47" stroke="#f0bd82" stroke-width="3" fill="none"/>
+    <path d="M621 333l7 8 7-8" stroke="#f0bd82" stroke-width="3" fill="none"/>
+    <rect x="438" y="345" width="380" height="88" rx="14" fill="#45382e" stroke="#f0bd82" stroke-width="2"/>
+    <text x="628" y="379" fill="#fff2df" font-size="18" font-weight="700">계약 밖의 요청은 실행하지 않음</text>
+    <text x="628" y="407" fill="#f6dfc3" font-size="15">모호하면 재질문 · 권한 밖이면 거절</text>
+  </g>
+</svg>

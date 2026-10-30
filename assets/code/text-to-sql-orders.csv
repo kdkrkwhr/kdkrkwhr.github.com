@@ -1,0 +1,6 @@
+order_id,tenant_id,placed_at_utc,status,total_won
+1,shop-a,2026-09-30T15:00:00Z,PAID,10000
+2,shop-a,2026-10-01T03:00:00Z,PAID,20000
+3,shop-a,2026-10-02T14:59:00Z,CANCELED,30000
+4,shop-a,2026-10-02T15:00:00Z,PAID,40000
+5,shop-b,2026-10-01T04:00:00Z,PAID,50000

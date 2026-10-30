@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="1010" viewBox="0 0 420 1010" role="img" aria-labelledby="title desc">
+  <title id="title">모바일용 Text-to-SQL 조회 흐름</title>
+  <desc id="desc">질문, LLM 의도 추출, 서버 검증, 고정 쿼리, DB 조회 순서. 모호하거나 불허된 요청은 실행하지 않는다.</desc>
+  <rect width="420" height="1010" rx="20" fill="#0c1829"/>
+  <text x="24" y="43" fill="#f4f8ff" font-size="21" font-family="Arial, sans-serif" font-weight="700">Text-to-SQL의 실행 경계</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <rect x="28" y="75" width="364" height="113" rx="14" fill="#173755" stroke="#4ea4df" stroke-width="2"/>
+    <text x="210" y="112" fill="#e8f6ff" font-size="21" font-weight="700">사용자 질문</text>
+    <text x="210" y="150" fill="#c5d5e7" font-size="16">“10월 1~2일 결제 매출은?”</text>
+    <rect x="28" y="223" width="364" height="113" rx="14" fill="#224062" stroke="#74b8eb" stroke-width="2"/>
+    <text x="210" y="260" fill="#e8f6ff" font-size="21" font-weight="700">LLM 추출</text>
+    <text x="210" y="298" fill="#c5d5e7" font-size="16">지표 · 날짜 / SQL·테넌트 제외</text>
+    <rect x="28" y="371" width="364" height="113" rx="14" fill="#224b43" stroke="#69ccb0" stroke-width="2"/>
+    <text x="210" y="408" fill="#effff9" font-size="21" font-weight="700">서버 검증</text>
+    <text x="210" y="446" fill="#cce9df" font-size="16">인증 테넌트 · 권한 · 기간</text>
+    <rect x="28" y="519" width="364" height="113" rx="14" fill="#224b43" stroke="#69ccb0" stroke-width="2"/>
+    <text x="210" y="556" fill="#effff9" font-size="21" font-weight="700">고정 쿼리</text>
+    <text x="210" y="594" fill="#cce9df" font-size="16">허용 식별자 선택 · 값 바인딩</text>
+    <rect x="28" y="667" width="364" height="113" rx="14" fill="#4e3b2b" stroke="#e5ad69" stroke-width="2"/>
+    <text x="210" y="704" fill="#fff4e7" font-size="21" font-weight="700">DB 조회</text>
+    <text x="210" y="742" fill="#f4ddbe" font-size="16">읽기 권한 · 시간 제한</text>
+    <path d="M210 188v35 M210 336v35 M210 484v35 M210 632v35" stroke="#d9e6f2" stroke-width="3"/>
+    <path d="M203 214l7 8 7-8 M203 362l7 8 7-8 M203 510l7 8 7-8 M203 658l7 8 7-8" stroke="#d9e6f2" stroke-width="3" fill="none"/>
+    <rect x="28" y="825" width="364" height="145" rx="14" fill="#45382e" stroke="#f0bd82" stroke-width="2"/>
+    <text x="210" y="868" fill="#fff2df" font-size="18" font-weight="700">검증 실패 시 실행 중단</text>
+    <text x="210" y="907" fill="#f6dfc3" font-size="16">모호하면 재질문</text>
+    <text x="210" y="936" fill="#f6dfc3" font-size="16">권한 밖이면 거절</text>
+  </g>
+</svg>
