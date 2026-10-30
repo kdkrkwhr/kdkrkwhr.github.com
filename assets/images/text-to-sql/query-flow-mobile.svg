@@ -6,7 +6,8 @@
   <g font-family="Arial, sans-serif" text-anchor="middle">
     <rect x="28" y="75" width="364" height="113" rx="14" fill="#173755" stroke="#4ea4df" stroke-width="2"/>
     <text x="210" y="112" fill="#e8f6ff" font-size="21" font-weight="700">사용자 질문</text>
-    <text x="210" y="150" fill="#c5d5e7" font-size="16">“10월 1~2일 결제 매출은?”</text>
+    <text x="210" y="145" fill="#c5d5e7" font-size="16">“10월 1~2일 생성 주문 중</text>
+    <text x="210" y="170" fill="#c5d5e7" font-size="16">결제 완료 주문 총액?”</text>
     <rect x="28" y="223" width="364" height="113" rx="14" fill="#224062" stroke="#74b8eb" stroke-width="2"/>
     <text x="210" y="260" fill="#e8f6ff" font-size="21" font-weight="700">LLM 추출</text>
     <text x="210" y="298" fill="#c5d5e7" font-size="16">지표 · 날짜 / SQL·테넌트 제외</text>
