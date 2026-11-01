@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="380" viewBox="0 0 1000 380" role="img" aria-labelledby="title desc">
+  <title id="title">Spring 트랜잭션 전파 옵션의 DB 경계 비교</title>
+  <desc id="desc">REQUIRED는 하나의 물리 트랜잭션, REQUIRES_NEW는 바깥 트랜잭션을 보류하고 독립 물리 트랜잭션, NESTED는 하나의 물리 트랜잭션 안에 세이브포인트를 둔다. 어느 경우도 HTTP 예약을 포함하지 않는다.</desc>
+  <rect width="1000" height="380" rx="20" fill="#0c1829"/>
+  <g font-family="Arial, sans-serif">
+    <text x="34" y="50" fill="#f4f8ff" font-size="25" font-weight="700">전파 옵션이 바꾸는 것은 DB 안의 경계</text>
+    <text x="34" y="80" fill="#bdd0e3" font-size="16">바깥 서비스가 안쪽 서비스를 프록시를 통해 호출했다고 가정</text>
+    <g stroke-width="2">
+      <rect x="34" y="112" width="298" height="220" rx="15" fill="#173755" stroke="#6bb9e6"/>
+      <rect x="351" y="112" width="298" height="220" rx="15" fill="#224062" stroke="#85cdf3"/>
+      <rect x="668" y="112" width="298" height="220" rx="15" fill="#224b43" stroke="#69ccb0"/>
+    </g>
+    <g font-size="21" font-weight="700" fill="#eff8ff"><text x="54" y="154">REQUIRED</text><text x="371" y="154">REQUIRES_NEW</text><text x="688" y="154">NESTED</text></g>
+    <g font-size="17" fill="#d7e8f5"><text x="54" y="197">바깥 TX + 안쪽 범위</text><text x="54" y="230">물리 TX 하나 공유</text><text x="54" y="263">안쪽 rollback-only →</text><text x="54" y="290">전체 커밋 불가</text><text x="371" y="197">바깥 TX 일시 보류</text><text x="371" y="230">안쪽 물리 TX 별도 시작</text><text x="371" y="263">안쪽은 먼저 커밋 가능</text><text x="371" y="290">연결 풀 여유 필요</text><text x="688" y="197">물리 TX 하나 공유</text><text x="688" y="230">안쪽 savepoint 설정</text><text x="688" y="263">안쪽 DB 변경만 되돌림</text><text x="688" y="290">JDBC 지원 여부 확인</text></g>
+    <text x="34" y="358" fill="#ffcfbd" font-size="17" font-weight="700">공통: HTTP 예약 효과는 이 세 경계의 롤백 대상이 아닙니다.</text>
+  </g>
+</svg>

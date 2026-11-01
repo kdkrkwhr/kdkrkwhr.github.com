@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="710" viewBox="0 0 420 710" role="img" aria-labelledby="title desc">
+  <title id="title">모바일용 HTTP 성공 뒤 DB 롤백 흐름</title>
+  <desc id="desc">PENDING INSERT, HTTP 예약 성공, 커밋 전 실패, 주문 롤백과 예약 존속 순서.</desc>
+  <rect width="420" height="710" rx="20" fill="#0c1829"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="210" y="47" fill="#f4f8ff" font-size="23" font-weight="700">HTTP 성공 ≠ 주문 커밋</text>
+    <text x="210" y="78" fill="#bdd0e3" font-size="15">가상 주문·예약 예제</text>
+    <rect x="25" y="108" width="370" height="101" rx="13" fill="#173755" stroke="#6bb9e6" stroke-width="2"/>
+    <text x="210" y="147" fill="#eaf5ff" font-size="19" font-weight="700">1. 주문 DB</text>
+    <text x="210" y="180" fill="#d8eaff" font-size="16">PENDING INSERT · 아직 미커밋</text>
+    <rect x="25" y="246" width="370" height="101" rx="13" fill="#224062" stroke="#85cdf3" stroke-width="2"/>
+    <text x="210" y="285" fill="#eaf5ff" font-size="19" font-weight="700">2. 예약 API</text>
+    <text x="210" y="318" fill="#d8eaff" font-size="16">HTTP 200 · 예약 효과 반영</text>
+    <rect x="25" y="384" width="370" height="101" rx="13" fill="#443039" stroke="#fa9c95" stroke-width="2"/>
+    <text x="210" y="423" fill="#ffded8" font-size="19" font-weight="700">3. DB 커밋 전 실패</text>
+    <text x="210" y="456" fill="#ffded8" font-size="16">로컬 트랜잭션 롤백</text>
+    <path d="M210 209v37 M210 347v37 M210 485v37" stroke="#d9e6f2" stroke-width="3"/>
+    <path d="M202 235l8 9 8-9 M202 373l8 9 8-9 M202 511l8 9 8-9" fill="none" stroke="#d9e6f2" stroke-width="3"/>
+    <rect x="25" y="522" width="370" height="141" rx="13" fill="#224b43" stroke="#69ccb0" stroke-width="2"/>
+    <text x="210" y="565" fill="#effff9" font-size="19" font-weight="700">남은 결과</text>
+    <text x="210" y="602" fill="#effff9" font-size="17">주문: 없음</text>
+    <text x="210" y="633" fill="#effff9" font-size="17">예약: 있음</text>
+  </g>
+</svg>
