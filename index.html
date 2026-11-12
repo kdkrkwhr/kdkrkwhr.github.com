@@ -1,104 +1,61 @@
 ---
 layout: default
 title: DK 기술 블로그
+home: true
 ---
+<section class="home-hero" aria-labelledby="intro-heading">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> ENGINEERING NOTES</p>
+    <h1 id="intro-heading">만들고, 고민하고.<br><span>그 과정을 기록합니다.</span></h1>
+    <p class="hero-description">백엔드부터 인프라, AI까지.<br>직접 부딪히며 배운 것들을 나눕니다.</p>
+    <a class="text-link" href="#posts">글 둘러보기 <span aria-hidden="true">↗</span></a>
+  </div>
+  {% assign latest = site.posts.first %}
+  {% if latest %}
+  <a class="featured-note" href="{{ latest.url | relative_url }}">
+    <div class="featured-top"><span class="eyebrow">LATEST NOTE</span><span aria-hidden="true">↗</span></div>
+    <div>
+      <span class="post-card-category">{{ latest.categories | first | default: 'Notes' | escape }}</span>
+      <h2>{{ latest.title | escape }}</h2>
+      <p>{{ latest.excerpt | strip_html | truncate: 100 | escape }}</p>
+    </div>
+    <time datetime="{{ latest.date | date_to_xmlschema }}">{{ latest.date | date: '%Y.%m.%d' }}</time>
+  </a>
+  {% endif %}
+</section>
 
-<section class="home-hero">
-  <img
-    class="home-hero-bg"
-    src="{{ '/assets/images/whale-hero.jpg' | relative_url }}"
-    alt=""
-    width="1600"
-    height="360"
-    decoding="async"
-    fetchpriority="high"
-    aria-hidden="true"
-  >
-  <div class="home-hero-copy">
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
+<section class="article-browser" id="posts" aria-labelledby="posts-heading">
+  {% include sidebar.html %}
+  <div class="article-results">
+    <div class="section-header">
+      <div><p class="eyebrow">THE ARCHIVE</p><h2 id="posts-heading">글 모아보기 <span id="post-count">{{ site.posts.size }}</span></h2></div>
+      <label class="search-field"><span class="visually-hidden">글 검색</span><span aria-hidden="true">⌕</span><input type="search" id="post-search" placeholder="궁금한 기술을 검색해 보세요" autocomplete="off"></label>
+    </div>
+    <p class="visually-hidden" id="filter-status" aria-live="polite"></p>
+    <ul class="post-grid" id="post-grid">
+      {% for post in site.posts %}
+      <li class="post-card" data-category="{{ post.categories | first | downcase | escape }}">
+        <a href="{{ post.url | relative_url }}" class="post-card-link">
+          <div class="post-card-meta"><span class="post-card-category">{{ post.categories | first | default: 'Notes' | escape }}</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time></div>
+          <h3 class="post-card-title">{{ post.title | escape }}</h3>
+          <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 130 | escape }}</p>
+          <span class="post-card-cta" aria-hidden="true">읽어보기 <span>↗</span></span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="empty-state" id="empty-state" hidden><h3>검색 결과가 없어요.</h3><p>다른 키워드나 카테고리로 찾아보세요.</p><button type="button" id="filter-reset" class="button-secondary">전체 글 보기</button></div>
+    <button type="button" class="load-more button-secondary" id="load-more" hidden>글 더 보기 <span aria-hidden="true">↓</span></button>
+    <noscript><p>모든 글을 표시하고 있습니다. 검색과 필터는 JavaScript를 켜면 사용할 수 있습니다.</p></noscript>
   </div>
 </section>
 
 {% if site.data.projects and site.data.projects.size > 0 %}
 <section class="projects-section" id="projects" aria-labelledby="projects-heading">
-  <div class="section-header">
-    <h2 id="projects-heading">Projects</h2>
-    <p class="post-count">{{ site.data.projects.size }} projects</p>
-  </div>
-  <ul class="project-grid">
-    {% for project in site.data.projects %}
-    <li class="project-card">
-      <a href="{{ project.url }}" class="project-card-link" target="_blank" rel="noopener">
-        <div class="project-card-meta">
-          {% if project.tag %}<span class="post-card-category">{{ project.tag }}</span>{% endif %}
-          <span class="project-card-host">{{ project.host | default: "GitHub Pages" }}</span>
-        </div>
-        <h3 class="project-card-title">{{ project.title }}</h3>
-        <p class="project-card-excerpt">{{ project.description }}</p>
-        <span class="post-card-cta">{{ project.cta | default: "Open app →" }}</span>
-      </a>
-      {% if project.repo %}
-      <a class="project-repo-link" href="{{ project.repo }}" target="_blank" rel="noopener">소스 보기</a>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
+  <div class="section-header"><div><p class="eyebrow">BUILT & SHARED</p><h2 id="projects-heading">직접 만든 것들</h2></div><a class="text-link" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub ↗</a></div>
+  <ul class="project-grid">{% for project in site.data.projects %}
+    <li class="project-card"><a href="{{ project.url }}" class="project-card-link" target="_blank" rel="noopener"><span class="eyebrow">{{ project.tag | default: 'PROJECT' | escape }}</span><h3>{{ project.title | escape }} <span aria-hidden="true">↗</span></h3><p>{{ project.description | escape }}</p></a>{% if project.repo %}<a class="project-repo-link" href="{{ project.repo }}" target="_blank" rel="noopener">소스 보기 ↗</a>{% endif %}</li>
+  {% endfor %}</ul>
 </section>
 {% endif %}
-
-<section class="post-list-section">
-  <div class="section-header">
-    <h2>Recent Posts</h2>
-    <p class="post-count">{{ site.posts.size }} articles</p>
-  </div>
-
-  <ul class="post-grid" id="post-grid">
-    {% for post in site.posts %}
-    <li class="post-card" data-category="{{ post.categories | first | downcase }}">
-      <a href="{{ post.url | relative_url }}" class="post-card-link">
-        <div class="post-card-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
-          {% if post.categories %}
-            <span class="post-card-category">{{ post.categories | first }}</span>
-          {% endif %}
-        </div>
-        <h3 class="post-card-title">{{ post.title }}</h3>
-        {% if post.excerpt %}
-          <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-        {% endif %}
-        <span class="post-card-cta">Read more →</span>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-
-  <p class="empty-state" id="empty-state" hidden>해당 카테고리의 글이 없습니다.</p>
-</section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var chips = document.querySelectorAll('.category-chip');
-    var cards = document.querySelectorAll('.post-card');
-    var empty = document.getElementById('empty-state');
-    if (!chips.length || !cards.length) return;
-
-    function filter(category) {
-      var visible = 0;
-      cards.forEach(function (card) {
-        var match = category === 'all' || card.dataset.category === category;
-        card.hidden = !match;
-        if (match) visible++;
-      });
-      if (empty) empty.hidden = visible > 0;
-    }
-
-    chips.forEach(function (chip) {
-      chip.addEventListener('click', function () {
-        chips.forEach(function (c) { c.classList.remove('is-active'); });
-        chip.classList.add('is-active');
-        filter(chip.dataset.category);
-      });
-    });
-  });
-</script>
+<script src="{{ '/assets/js/archive.js' | relative_url }}" defer></script>

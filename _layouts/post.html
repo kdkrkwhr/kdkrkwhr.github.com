@@ -2,7 +2,9 @@
 layout: default
 ---
 
+<div class="reading-layout">
 <article class="post">
+  <a class="back-link" href="{{ '/#posts' | relative_url }}">← 전체 글</a>
   <header class="post-header">
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
@@ -27,3 +29,5 @@ layout: default
   </section>
   {% endif %}
 </article>
+<aside class="article-outline" id="article-outline" aria-label="글 목차" hidden><p class="eyebrow">ON THIS PAGE</p><nav id="outline-links" aria-label="본문 목차"></nav><a class="back-link" href="#main-content">맨 위로 ↑</a></aside>
+</div>

@@ -31,3 +31,8 @@ analytics:
   google:
     tracking_id: G-PEYQZC0NSH
     anonymize_ip: false
+
+# Development-only documentation and regression tests
+exclude:
+  - docs
+  - tests

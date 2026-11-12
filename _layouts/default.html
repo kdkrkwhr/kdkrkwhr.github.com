@@ -1,51 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ site.locale }}">
-<head>
-  {% include head.html %}
-  {% include analytics.html %}
-</head>
-<body>
+<head>{% include head.html %}{% include analytics.html %}</head>
+<body{% if page.home %} class="is-home"{% endif %}>
   <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <a href="{{ '/' | relative_url }}" class="brand-link">
-          <span class="brand-name">{{ site.name }}</span>
-          <span class="brand-tagline">{{ site.tagline }}</span>
-        </a>
-      </div>
-
-      <nav class="site-nav" aria-label="주요 메뉴">
-        <a href="{{ '/' | relative_url }}">Posts</a>
-        <a href="{{ '/#projects' | relative_url }}">Projects</a>
-        <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a>
-      </nav>
-
-      <div class="header-actions">
-        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="테마 전환">
-          <span class="theme-icon theme-icon-light" aria-hidden="true">☀</span>
-          <span class="theme-icon theme-icon-dark" aria-hidden="true">☾</span>
-        </button>
-        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <div class="container site-body">
-    <main id="main-content" class="main-content">
-      {{ content }}
-    </main>
-    {% include sidebar.html %}
-  </div>
-
+  <header class="site-header"><div class="container header-inner">
+    <a href="{{ '/' | relative_url }}" class="brand-link" aria-label="DK 기술 블로그 홈"><span class="brand-mark">dk<span>.</span></span><span class="brand-label">기술을 기록하는 공간</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴"><a href="{{ '/#posts' | relative_url }}">글</a><a href="{{ '/#projects' | relative_url }}">프로젝트</a><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub ↗</a></nav>
+    <div class="header-actions"><button type="button" class="theme-toggle" id="theme-toggle" aria-label="다크 모드로 전환"><span class="theme-icon theme-icon-light" aria-hidden="true">☾</span><span class="theme-icon theme-icon-dark" aria-hidden="true">☀</span></button><button type="button" class="nav-toggle" id="nav-toggle" aria-label="메뉴 열기" aria-controls="site-nav" aria-expanded="false"><span></span><span></span></button></div>
+  </div></header>
+  <main id="main-content" class="container main-content">{{ content }}</main>
   {% include footer.html %}
   <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
   <script src="{{ '/assets/js/mermaid-init.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
+  {% unless page.home %}<script src="{{ '/assets/js/article.js' | relative_url }}" defer></script>{% endunless %}
 </body>
 </html>

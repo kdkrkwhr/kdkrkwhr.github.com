@@ -52,3 +52,18 @@ Generated static files land in `_site/`.
 
 - GitHub Pages supports **kramdown** only.
 - Set `published: false` in front matter to exclude a draft from the build.
+
+## UI regression checks
+
+The archive is progressively enhanced: every article remains linked without JavaScript.
+`assets/js/archive.js` handles search, category filters and incremental display.
+`assets/js/article.js` adds an outline and scrollable table wrappers without changing post sources.
+
+After installing `jsdom` in your development environment, run:
+
+```bash
+node tests/ui-regression.cjs
+bundle exec jekyll build
+```
+
+Check the homepage and an article at desktop and phone widths in both themes.

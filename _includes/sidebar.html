@@ -1,52 +1,11 @@
-<aside class="sidebar" id="sidebar">
-  {% if site.data.projects and site.data.projects.size > 0 %}
-  <section class="sidebar-section">
-    <h2 class="sidebar-title">Projects</h2>
-    <ul class="sidebar-links">
-      {% for project in site.data.projects %}
-      <li><a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-
-  <section class="sidebar-section">
-    <h2 class="sidebar-title">Connect</h2>
-    <ul class="sidebar-links">
-      <li><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://www.loudly.com/community/profiles/codek9" target="_blank" rel="noopener">Music Beats</a></li>
-    </ul>
-  </section>
-
-  {% assign all_categories = "" | split: "" %}
-  {% for post in site.posts %}
-    {% if post.categories %}
-      {% assign cat = post.categories | first %}
-      {% unless all_categories contains cat %}
-        {% assign all_categories = all_categories | push: cat %}
-      {% endunless %}
-    {% endif %}
-  {% endfor %}
+<aside class="sidebar" aria-label="글 카테고리">
+  <p class="eyebrow">EXPLORE</p>
+  {% assign all_categories = '' | split: '' %}
+  {% for post in site.posts %}{% assign cat = post.categories | first %}{% if cat %}{% unless all_categories contains cat %}{% assign all_categories = all_categories | push: cat %}{% endunless %}{% endif %}{% endfor %}
   {% assign all_categories = all_categories | sort %}
-  {% if all_categories.size > 0 %}
-  <section class="sidebar-section">
-    <h2 class="sidebar-title">Categories</h2>
-    <ul class="category-list">
-      <li>
-        <button type="button" class="category-chip is-active" data-category="all">All</button>
-      </li>
-      {% for category in all_categories %}
-      <li>
-        <button type="button" class="category-chip" data-category="{{ category | downcase }}">{{ category }}</button>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-
-  <section class="sidebar-section sidebar-about">
-    <h2 class="sidebar-title">About</h2>
-    <p>개발·DevOps·인프라를 다루는 기술 블로그입니다.</p>
-  </section>
+  <div class="category-list">
+    <button type="button" class="category-chip is-active" data-category="all" aria-pressed="true">전체 글 <span>{{ site.posts.size }}</span></button>
+    {% for category in all_categories %}<button type="button" class="category-chip" data-category="{{ category | downcase | escape }}" aria-pressed="false">{{ category | escape }}</button>{% endfor %}
+  </div>
+  <div class="sidebar-about"><span class="avatar-monogram" aria-hidden="true">DK.</span><p><strong>김동기</strong><br>Backend · Infrastructure · AI</p><div class="connect-links"><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://www.loudly.com/community/profiles/codek9" target="_blank" rel="noopener">Music ↗</a></div></div>
 </aside>
