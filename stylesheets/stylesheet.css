@@ -53,7 +53,7 @@ img { max-width: 100%; height: auto; }
 .text-link { font-size: 13px; font-weight: 650; }
 .text-link span { display: inline-block; margin-left: 12px; }
 .hero-visual { position: relative; margin: 0; min-width: 0; overflow: hidden; border-radius: 18px; border: 1px solid #273b58; background: #071322; }
-.hero-visual img { display: block; width: 100%; aspect-ratio: 1.5; object-fit: cover; object-position: center; }
+.hero-visual img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; }
 .hero-visual::after { content: ""; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent,rgba(3,12,26,.76)); pointer-events: none; }
 .hero-visual figcaption { position: absolute; bottom: 20px; left: 22px; z-index: 1; display: flex; align-items: center; gap: 8px; color: #c5dafa; font: 9px var(--font-mono); letter-spacing: .14em; }
 .hero-visual .status-dot { background: #87bbff; }
