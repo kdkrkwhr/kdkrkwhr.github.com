@@ -29,3 +29,14 @@ d.querySelector('#nav-toggle').click();assert.equal(d.querySelector('#nav-toggle
 d.querySelector('#nav-toggle').click();d.querySelector('#site-nav a').click();assert.equal(d.querySelector('#nav-toggle').getAttribute('aria-expanded'),'false');
 w.eval(script('article.js'));assert.equal(d.querySelectorAll('#outline-links a').length,2);assert.equal(d.querySelectorAll('.table-scroll').length,1);assert.equal(d.querySelector('#existing').id,'existing');assert.equal(d.querySelector('#article-outline').hidden,false);
 console.log('PASS: pagination, combined filters, empty/reset, URL restoration, blocked storage, theme, menu Escape/navigation, outline, table wrapper');
+const bootstrap = fs.readFileSync(path.join(root, '_includes/head.html'), 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
+for (const [stored,expected] of [[null,'dark'],['light','light'],['dark','dark'],['invalid','dark']]) {
+  const page = new JSDOM('<html></html>',{url:'https://example.org/',runScripts:'outside-only'});
+  if (stored) page.window.localStorage.setItem('theme',stored);
+  page.window.eval(bootstrap);
+  assert.equal(page.window.document.documentElement.dataset.theme,expected);
+}
+const indexSource=fs.readFileSync(path.join(root,'index.html'),'utf8');
+assert(indexSource.includes('/assets/images/whale-hero.jpg'));
+assert(indexSource.includes('alt="푸른 바다 속을 유영하는 고래"'));
+console.log('PASS: dark default, saved theme preservation, invalid theme fallback, accessible original whale image');
