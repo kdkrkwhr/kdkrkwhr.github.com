@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
-<link rel="stylesheet" href="{{ '/stylesheets/stylesheet.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/stylesheets/stylesheet.css' | relative_url }}?v=20261112">
 <link rel="stylesheet" href="{{ '/stylesheets/pygment_trac.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/stylesheets/print.css' | relative_url }}" media="print">
 
@@ -22,4 +22,4 @@
   })();
 </script>
 
-<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
